@@ -1,0 +1,32 @@
+#app h3{
+      color: blue;
+      font-family: 'sans';
+      margin-top:30px;
+}
+#app{
+    margin: 40px 40px 40px;
+}
+
+.mode {
+    float:right;
+    font-size: 20px;
+}
+.change {
+    cursor: pointer;
+    border: 1px solid #555;
+    border-radius: 40%;
+    width: 50px;
+    text-align: center;
+    padding: 10px;
+    margin-right: 40px;
+}
+.dark{
+    background-color: #222;
+    color: #e6e6e6;
+}
+
+.button{
+    width: 40px;
+
+}
+  

@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TV SHOWS</title>
+    <link rel="shortcut icon" href="icon.jpeg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="/examples/libs/chief-slider/chief-slider.min.css">
+    <script defer src="/examples/libs/chief-slider/chief-slider.min.js"></script>
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+<header class="fixed">
+    <div id="logo" onclick="slowScroll('#main')">
+        <span>MovieHub</span>
+    </div>
+</header>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    function slowScroll(id) {
+        $('html, body').animate({
+            scrollTop: $(id).offset().top
+        }, 500);
+    }
+    $(document).on("scroll", function () {
+        if($(window).scrollTop() === 0)
+            $("header").removeClass("fixed");
+        else
+            $("header").attr("class", "fixed");
+    });
+</script>
+
+
+<div id="main">
+    <a href="https://www.youtube.com/watch?v=UdUt3Dvvh74"><img src="https://nerdist.com/wp-content/uploads/2021/08/AmazonStudios_210802A_HD.jpg" alt="The Lord of The Ring" /></a>
+    <h2>
+        <span class="spacer">PREMIER:</span>
+        <span class="spacer">The lord of the rings : rings of power</span>
+    </h2>
+</div>
+<div class="pick">
+    <span> Popular &gt; </span>
+</div>
+<div class="creature"></div>
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <div class="numbertext">1/6</div>
+        <img src="https://image.tmdb.org/t/p/w780/gFZriCkpJYsApPZEF3jhxL4yLzG.jpg" style="width: 100%; align-items: center;" alt="myname" class="img-fluid">
+        <div class="text">Money Heist</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2/6</div>
+        <img src="https://image.tmdb.org/t/p/w780/5hnJl5uJc58EVdwGVZNKhQwNi0u.jpg" style="width: 100%; align-items: center;" alt="nowwe'rebreakingup" class="img-fluid">
+        <div class="text">Mr. Bean</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3/6</div>
+        <img src="https://image.tmdb.org/t/p/w780/ktDJ21QQscbMNQfPpZBsNORxdDx.jpg" style="width: 100%; align-items: center;" alt="snowdrop">
+        <div class="text">Lucifer</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4/6</div>
+        <img src="https://image.tmdb.org/t/p/w780/Ast1yAVp6shrWeC6KCtayWgZGcM.jpg" style="width: 100%; align-items: center;" alt="squidgame">
+        <div class="text">Merlin</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">5/6</div>
+        <img src="https://image.tmdb.org/t/p/w780/k66wW641A5Tok6OHMAsCbxM0UpG.jpg" style="width: 100%; align-items: center;" alt="Melancholia">
+        <div class="text">Sherlock</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">6/6</div>
+        <img src="https://image.tmdb.org/t/p/w780/oS3nip9GGsx5A7vWp8A1cazqJlF.jpg" style="width: 100%; align-items: center;" alt="Theghostdoctor">
+        <div class="text">Grimm</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+    <a class="next" onclick="plusSlides(1)">&#10095</a>
+</div>
+<br>
+
+<div style="text-align: center;">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+<script type="text/javascript" src="slider.js"></script>
+<div class="pick">
+    <span>Catalog &gt; </span>
+</div>
+
+<div id="catalog">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                    <img src="https://img.fboxtv.com/resize/180x271/3e/84/3e84ab277355f4e9010028603e2d1b4e/3e84ab277355f4e9010028603e2d1b4e.jpg">
+                    <h3>
+                        <a href="https://www.youtube.com/watch?v=t-775JyzDTk" target="_blank">
+                        <button type="button" class="btn btn-outline-primary">Supernatural</button>
+                        </a>
+                    </h3>
+            </div>
+            <div class="col order-1">
+                    <img src="https://img.fboxtv.com/resize/180x271/60/d7/60d752297cdf52ad36f4c2a1a45690fe/60d752297cdf52ad36f4c2a1a45690fe.jpg">
+                    <h3>
+                        <a href="https://www.youtube.com/watch?v=7H9AaiBLHCo" target="_blank">
+                        <button type="button" class="btn btn-outline-primary">Ragnarok</button>
+                        </a>
+                    </h3>
+            </div>
+            <div class="col order-2">
+                <img src="https://img.fboxtv.com/resize/180x271/e7/38/e738ef80a169a848c54620ae184c5624/e738ef80a169a848c54620ae184c5624.jpg">
+                <h3>
+                    <a href="https://www.youtube.com/watch?v=9tvkYS5cA58" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Shameless</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-3">
+                <img src="https://img.fboxtv.com/resize/180x271/77/77/7777a12ce2a310f909fbb0fd118f89a7/7777a12ce2a310f909fbb0fd118f89a7.jpg">
+                <h3>
+                    <a href="https://www.youtube.com/watch?v=xK7S9mrFWL4" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Sherlock</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-4">
+                <img src="https://img.fboxtv.com/resize/180x271/d8/c8/d8c89e3a326c9ab4427f7a93ad821170/d8c89e3a326c9ab4427f7a93ad821170.jpg">
+                <h3>
+                    <a href="https://youtu.be/QGzhWpD2gZw" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Dark</button>
+                    </a>
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="catalog">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://img.fboxtv.com/resize/180x271/09/41/0941e41738a802b89a4ae6673866f1bf/0941e41738a802b89a4ae6673866f1bf.jpg">
+                <h3>
+                    <a href="https://youtu.be/twdNrhOhshs" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Euphoria</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-1">
+                <img src="https://img.fboxtv.com/resize/180x271/88/22/8822b3a4f732a28db1d10002e6cecd23/8822b3a4f732a28db1d10002e6cecd23.jpg">
+                <h3>
+                    <a href="https://youtu.be/XyBXbYYSFiw" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Game of Thrones</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-2">
+                <img src="https://img.fboxtv.com/resize/180x271/48/69/486988573e1dc5027e6415ebb8092d0e/486988573e1dc5027e6415ebb8092d0e.jpg">
+                <h3>
+                    <a href="https://youtu.be/xJCTxUuu3js" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">The Responder</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-3">
+                <img src="https://img.fboxtv.com/resize/180x271/9d/a8/9da8623c061e5a5e59293a9a82d63d50/9da8623c061e5a5e59293a9a82d63d50.jpg">
+                <h3>
+                    <a href="https://youtu.be/8sXTfzaLmiQ" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Reframed:Marilyn Monrioe</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-4">
+                <img src="https://img.fboxtv.com/resize/180x271/e4/82/e4825d53072441905e1257c706f4c9c7/e4825d53072441905e1257c706f4c9c7.jpg">
+                <h3>
+                    <a href="https://youtu.be/g0Oj4A2rslY" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">The Flash</button>
+                    </a>
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="catalog">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://img.fboxtv.com/resize/180x271/b0/71/b0714c51585a468d8f151176f004abdb/b0714c51585a468d8f151176f004abdb.jpg">
+                <h3>
+                    <a href="https://youtu.be/Z2kJpmgz4jc" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Silicon Valley</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-1">
+                <img src="https://img.fboxtv.com/resize/180x271/dd/17/dd1722a9a09c44f3c48936947937f6fc/dd1722a9a09c44f3c48936947937f6fc.jpg">
+                <h3>
+                    <a href="https://youtu.be/S12-4mXCNj4" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Gotham</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-2">
+                <img src="https://img.fboxtv.com/resize/180x271/a4/68/a4687e919bdc10557d5e522d0aea2780/a4687e919bdc10557d5e522d0aea2780.jpg">
+                <h3>
+                    <a href="https://youtu.be/jLrWXxEAgXk" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">WandaVision</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-3">
+                <img src="https://img.fboxtv.com/resize/180x271/1a/29/1a290349294683dc2dc4879e2ca13b3d/1a290349294683dc2dc4879e2ca13b3d.jpg">
+                <h3>
+                    <a href="https://youtu.be/IR9cIGXbYLk" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">The Big Bang Theory</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-4">
+                <img src="https://img.fboxtv.com/resize/180x271/17/70/17706b76db65afe64fcfa91aafecd9b5/17706b76db65afe64fcfa91aafecd9b5.jpg">
+                <h3>
+                    <a href="https://youtu.be/E1O158mb5NM" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">The 100</button>
+                    </a>
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>

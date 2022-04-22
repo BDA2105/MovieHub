@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>filter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6a3b0d2a78.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="filter.css">
+    <link rel="shortcut icon" href="icon.jpeg" type="image/png">
+    <script type="text/javascript" src="filter.js"></script>
+
+</head>
+
+<div class="mode">
+    Dark mode:            
+    <span class="change">ON</span>
+</div>
+
+<div id="app">
+    <label for="filter">Search movie:
+      <input id="filter" v-model="filterText" type="text">
+    </label>
+    <h3>Sort titles by: 
+      <button @click="sortLowest">lowest rated</button>
+      <button @click="sortHighest">highest rated</button>
+    </h3>
+    <table>
+      <thead>
+        <tr>
+          <td v-for="key in columns">{{key}}</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="entry in filteredFilms">
+          <td v-for="key in columns"> {{entry[key]}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+      $( ".change" ).on("click", function() {
+          if( $( "body" ).hasClass( "dark" )) {
+              $( "body" ).removeClass( "dark" );
+              $( ".change" ).text( "ON" );
+          } else {
+              $( "body" ).addClass( "dark" );
+              $( ".change" ).text( "OFF" );
+          }
+      });
+  </script>
+  </html>
