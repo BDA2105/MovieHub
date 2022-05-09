@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ANIME</title>
+    <link rel="shortcut icon" href="../../MovieHub/images/icon.jpeg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../MovieHub/styles/all.css">
+    <link rel="stylesheet" href="../../MovieHub/styles/catalog.css">
+</head>
+<body>
+<header class="fixed">
+    <div id="logo" onclick="slowScroll('#main')">
+        <span>MovieHub</span>
+    </div>
+</header>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    function slowScroll(id) {
+        $('html, body').animate({
+            scrollTop: $(id).offset().top
+        }, 500);
+    }
+    $(document).on("scroll", function () {
+        if($(window).scrollTop() === 0)
+            $("header").removeClass("fixed");
+        else
+            $("header").attr("class", "fixed");
+    });
+</script>
+
+
+<div id="main">
+    <a href="https://www.youtube.com/watch?v=eGSL-l95VXw" target="_blank"><img src="https://images.gmanews.tv/webpics/2021/10/jjk_0b_2021_10_27_14_42_37.jpg" alt="avatar"></a>
+   
+</div>
+<div class="pick">
+    <span> Popular &gt; </span>
+</div>
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <div class="numbertext">1/6</div>
+        <img src="https://image.tmdb.org/t/p/w780/yXggMemopUDHwPgmi6X9Wh2BQra.jpg" style="width: 100%; align-items: center;" alt="myname" class="img-fluid">
+        <div class="text">Dragon Ball</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2/6</div>
+        <img src="https://image.tmdb.org/t/p/w780/a6ptrTUH1c5OdWanjyYtAkOuYD0.jpg" style="width: 100%; align-items: center;" alt="nowwe'rebreakingup" class="img-fluid">
+        <div class="text">One Piece</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3/6</div>
+        <img src="https://image.tmdb.org/t/p/w780/46ThFmdl8P8QRbgC2OcZ4UyFG3P.jpg" style="width: 100%; align-items: center;" alt="snowdrop">
+        <div class="text">Castlevania</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4/6</div>
+        <img src="https://image.tmdb.org/t/p/w780/ly0tvRfOp936Zmr6vepusFeo7lp.jpg" style="width: 100%; align-items: center;" alt="squidgame">
+        <div class="text">Steins;Gate</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">5/6</div>
+        <img src="https://image.tmdb.org/t/p/w780/qtfMr08KQsWXnCHY0a96N8NpQ2l.jpg" style="width: 100%; align-items: center;" alt="Melancholia">
+        <div class="text">Bleach</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">6/6</div>
+        <img src="https://image.tmdb.org/t/p/w780/kP5duNJEbTfXpBs6CITsaZ88pQi.jpg" style="width: 100%; align-items: center;" alt="Theghostdoctor">
+        <div class="text">Mob Psycho 100</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+    <a class="next" onclick="plusSlides(1)">&#10095</a>
+</div>
+<br>
+
+<div style="text-align: center;">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+<script type="text/javascript" src="../../MovieHub/script/slider.js"></script>
+
+<div class="pick">
+    <span>Catalog &gt; </span>
+</div>
+
+<div id="catalog">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                    <img src="https://img.fboxtv.com/resize/180x271/0f/33/0f335207b9f3618efcdf2aee47deb87f/0f335207b9f3618efcdf2aee47deb87f.jpg">
+                    <h3>
+                        <a href="https://www.youtube.com/watch?v=s2-1hz1juBI" target="_blank">
+                        <button type="button" class="btn btn-outline-primary"> Evangelion</button>
+                        </a>
+                    </h3>
+            </div>
+            <div class="col order-1">
+                    <img src="https://img.fboxtv.com/resize/180x271/4d/23/4d2348e6af9f7ae06c1e42684eafa0c1/4d2348e6af9f7ae06c1e42684eafa0c1.jpg">
+                    <h3>
+                        <a href="https://www.youtube.com/watch?v=bLvqoHBptjg" target="_blank">
+                        <button type="button" class="btn btn-outline-primary">Naruto Shippūden</button>
+                        </a>
+                    </h3>
+            </div>
+            <div class="col order-2">
+                <img src="https://img.fboxtv.com/resize/180x271/d7/38/d7380c0e22b5493e8f2257c539d8a6fa/d7380c0e22b5493e8f2257c539d8a6fa.jpg">
+                <h3>
+                    <a href="https://www.youtube.com/watch?v=QkZxoko_HC0" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Demon Slayer</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-3">
+                <img src="https://img.fboxtv.com/resize/180x271/a6/c2/a6c24f1207182f36619a68bc73916c03/a6c24f1207182f36619a68bc73916c03.jpg">
+                <h3>
+                    <a href="https://www.youtube.com/watch?v=YoHD9XEInc0" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Dragon Ball Z</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-4">
+                <img src="https://img.fboxtv.com/resize/180x271/52/a7/52a78ff43c845617924b4296025a4e26/52a78ff43c845617924b4296025a4e26.jpg">
+                <h3>
+                    <a href="https://youtu.be/QGzhWpD2gZw" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Blue Exorcist</button>
+                    </a>
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="catalog">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://img.fboxtv.com/resize/180x271/75/e0/75e0bfae315594720f884d77f482e63f/75e0bfae315594720f884d77f482e63f.jpg">
+                <h3>
+                    <a href="https://youtu.be/twdNrhOhshs" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">One Piece</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-1">
+                <img src="https://img.fboxtv.com/resize/180x271/f8/cf/f8cf83f69fa3a2a92035264724dcbd0b/f8cf83f69fa3a2a92035264724dcbd0b.jpg">
+                <h3>
+                    <a href="https://youtu.be/XyBXbYYSFiw" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Hunter x Hunter</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-2">
+                <img src="https://img.fboxtv.com/resize/180x271/dc/36/dc365d1efccf47150a0b38af3cf42e34/dc365d1efccf47150a0b38af3cf42e34.jpg">
+                <h3>
+                    <a href="https://youtu.be/xJCTxUuu3js" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">My Hero Academia</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-3">
+                <img src="https://img.fboxtv.com/resize/180x271/7c/6a/7c6a36071ec326fcac9c68573e3085df/7c6a36071ec326fcac9c68573e3085df.jpg">
+                <h3>
+                    <a href="https://youtu.be/8sXTfzaLmiQ" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Fullmetal Alchemist</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-4">
+                <img src="https://img.fboxtv.com/resize/180x271/64/a4/64a4db2b557aaa4ee93698c830556634/64a4db2b557aaa4ee93698c830556634.jpg">
+                <h3>
+                    <a href="https://youtu.be/g0Oj4A2rslY" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Code Geass</button>
+                    </a>
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="catalog">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://img.fboxtv.com/resize/180x271/9e/54/9e5448ab03e0282edbb4fb7fcff820fb/9e5448ab03e0282edbb4fb7fcff820fb.jpg">
+                <h3>
+                    <a href="https://youtu.be/Z2kJpmgz4jc" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">One-Punch Man</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-1">
+                <img src="https://img.fboxtv.com/resize/180x271/49/69/49691956b0ea5a8ffa08b9f73263edf6/49691956b0ea5a8ffa08b9f73263edf6.jpg">
+                <h3>
+                    <a href="https://youtu.be/S12-4mXCNj4" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Bungo Stray Dogs</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-2">
+                <img src="https://img.fboxtv.com/resize/180x271/13/19/131988567f023e4a2a3d1cf451272a83/131988567f023e4a2a3d1cf451272a83.jpg">
+                <h3>
+                    <a href="https://youtu.be/jLrWXxEAgXk" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Your Lie in April</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-3">
+                <img src="https://image.tmdb.org/t/p/original/ImvHbM4GsJJykarnOzhtpG6ax6.jpg">
+                <h3>
+                    <a href="https://youtu.be/IR9cIGXbYLk" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Violet Evergarden</button>
+                    </a>
+                </h3>
+            </div>
+            <div class="col order-4">
+                <img src="https://img.fboxtv.com/resize/180x271/91/f5/91f5eaa4f1a40d9f08421c282da2209b/91f5eaa4f1a40d9f08421c282da2209b.jpg">
+                <h3>
+                    <a href="https://youtu.be/E1O158mb5NM" target="_blank">
+                    <button type="button" class="btn btn-outline-primary">Howl's Moving Castle</button>
+                    </a>
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
