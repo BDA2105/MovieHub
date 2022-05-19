@@ -1,0 +1,92 @@
+body{
+    background-color: black;
+}
+.pricing-plan{
+    background-color: white;
+    width: 300px;
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555555;
+    margin: 15px;
+}
+.pricing-plan-highlighted{
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    transform: scale(1.05);
+}
+.pricing-plan-header{
+    padding: 25px;
+    background: #ef233c;
+    color: #FFFFFF;
+}
+.pricing-plan-title{
+    margin: 0;
+    text-align: center;
+}
+.pricing-plan-title{
+    font-size: 1.5em;
+    font-weight: 400;
+}
+.pricing-plan-description{
+    padding: 25px;
+}
+.pricing-plan-list{
+    padding: 0;
+    margin: 0;
+}
+.pricing-plan-feature{
+    list-style: none;
+    margin: 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 0.9em;
+}
+.pricing-plan-feature:not(:last-child){
+    margin-bottom: 0.5em;
+}
+.pricing-plan-feature::before{
+    content: "\2714";
+    color: #009578;
+    position: absolute;
+    left: 0;
+}
+.pricing-plan-actions{
+    padding: 25px;
+    border-top: 1px solid #eeeeee;
+    display: flex;
+    flex-direction: column;
+}
+.pricing-plan-actions button{
+    width: 240px;
+    padding: 10px 20px;
+    background: transparent;
+    color: black;
+    font-size: 15px;
+    border: 1px solid darkred;
+    border-radius: 6px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+.pricing-plan-actions button:hover{
+    background: darkred;
+}
+.pricing-plan-cost{
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+    color: #000000;
+}
+.pricing-plan-text{
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+.pricing-plan-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

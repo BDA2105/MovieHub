@@ -1,204 +1,508 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
     <title>MovieHub</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/6a3b0d2a78.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="shortcut icon" href="images/icon.jpeg" type="image/png">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+            <div class="navigation">
+                <input type="checkbox" class="menu-btn" id="menu-btn">
+                <label for="menu-btn" class="menu-icon">
+                    <span class="nav-icon"></span>
+                </label>
 
-<header>
-    <div id="logo">
-        <span>MovieHub</span>
-        <a href="web_pages/sign.html" target="_blank"><i class="fas fa-sign-in-alt"></i></a>
-        <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="overlay-content">
-              <a href="#"></a>
-              <a href="web_pages/filter.html" target="_blank">Filter</a>
-              <a href="web_pages/api.html" target="_blank">API</a>
-              <a href="https://doramalive.ru/" target="_blank">DoramaLive</a>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="api.html">API</a></li>
+                    <li><a href="Front/profile.html">Profile</a></li>
+                    <li><a href="Front/sign.html">Sign Up</a></li>
+                    <li><a href="Front/login.html">Login</a></li>
+                    <li><a href="web_pages/pricing_table.html">Premium</a></li>
+                </ul>
             </div>
-          
-          </div>
-      
-          <!-- Use any element to open/show the overlay navigation menu -->
-         <a class="open"> <span onclick="openNav()"><h2>Open</h2></span></a>
-          <script type="text/javascript" src="script/main.js"></script>
-    </div>
 
-</header>
-
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="container mt-4">
-        <div class="row ">
-            <div class="col-12 m-auto">
-    <div class="carousel-inner">
-        <div class="carousel-item active" >
-          <img src="images/slider1.jpeg"  alt="Number 1" class="img-fluid">
-    </div>
-        <div class="carousel-item" >
-            <img src="images/slider2.jpeg"  alt="Number 2 " class="img-fluid">
-        </div>
-        <div class="carousel-item" >
-            <img src="images/slider3.jpeg"  alt="Number 3" class="img-fluid">
-        </div>
-        <div class="carousel-item" >
-            <img src="images/slider4.jpeg"  alt="Number 4" class="img-fluid">
-        </div>
-        <div class="carousel-item" >
-            <img src="images/slider5.jpeg"  alt="Number 5" class="img-fluid">
-        </div>
-    </div>
-            </div>
-        </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row ">
-        <div class="col-12">
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-        </div>
-    </div>
-  </div>
-</div>
-
-<div id="Catalog">Catalog</div>
-    
-<div id = "main">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <a href="web_pages/tvshow.html" target="_blank"><img src="https://image.tmdb.org/t/p/original/oY3ck2Sdu8qsEWFnuiX2HEfr65k.jpg"  alt="tvShows"><h3><button type="button" class="btn btn-outline-primary">TV SHOWS</button></h3>
-                </a>
-            </div>
-            <div class="col order-2"><a href="web_pages/cartoons.html" target="_blank"><img src="https://image.tmdb.org/t/p/original/dNxEEK5CdNQbp4YcEtICXelRqvP.jpg" alt="cartoons" ><h3><button type="button" class="btn btn-outline-primary">CARTOONS</button></h3>
-            </a>
-        </div>
-            <div class="col order-3"><a href="web_pages/films.html" target="_blank"><img src="https://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg" alt="films" ><h3><button type="button" class="btn btn-outline-primary"  >FILMS</button></h3></a></div>
-            <div class="col order-4"><a href="web_pages/drama.html" target="_blank"><img src="https://image.tmdb.org/t/p/original/dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg" alt="drama"><h3><button type="button" class="btn btn-outline-primary"  >ASIAN DRAMA</button></h3></a></div>
-            <div class="col order-5"><a href="web_pages/anime.html" target="_blank"><img src="https://image.tmdb.org/t/p/original/aiy35Evcofzl7hASZZvsFgltHTX.jpg" alt="anime" ><h3><button type="button" class="btn btn-outline-primary"  >ANIME</button></h3></a></div>
-</div>
-</div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-</body>
-<footer>
- 
-    <div class="container">
-        <div class="row">
-    <div id="block1">
-        <div class="col-8">
-        <div id="title">MovieHUB </div>
-        <p>Movie & series recommendation service.<br>All rights to the provided movies & series belong to their respective owners.</p>
-        <div id="buttons">
-            <a href="https://vk.com" title="Vk group" target="_blank">
-                <img src="https://img.icons8.com/material/36/ffffff/vk-circled.png" alt="Vk" title="Vkontakte">
-            </a>
-            <a href="https://facebook.com" title="Facebook group" target="_blank">
-                <img src="https://img.icons8.com/material/36/ffffff/facebook-new.png" alt="FB" title="Facebook">
-            </a>
-            <a href="https://instagram.com" title="Instagram" target="_blank">
-                <img src="https://img.icons8.com/material/36/ffffff/instagram-new--v1.png" alt="Inst" title="Instagram">
-            </a>
-            <a href="https://twitter.com" title="Twitter" target="_blank">
-                <img src="https://img.icons8.com/material/36/ffffff/twitter-squared.png" alt="TWT" title="Twitter">
-            </a>
-        </div>
-        </div>
-
-    <div id="block2">
-        <div class="col-4">
-        <div id="Contact us">Contact us</div>
-        <div id="Contacts info">
-            <img src="https://img.icons8.com/material/24/ffffff/whatsapp--v1.png" alt="WhatsApp"/> +7 701 735 12 26 <br>
-            <img src="https://img.icons8.com/material/24/ffffff/sent--v1.png" alt="Telegram"/> @moviehub <br>
-            <img src="https://img.icons8.com/material/24/ffffff/gmail--v1.png" alt="E-mail"/> moviehub.aitu@gmail.com
-        </div>
-    </div>
-    </div>
-    </div>
-
-
-    <div id="weather">
-        <div class="container">
-            <div class="card">
-                <h2><i class="fa fa-map-marker"></i> <span id="location" class="cityy"></span></h2>
-                <h6 id="weather"></h6>
-                <h4><span class="deg"></span><sup>o</sup>C</h4>
-                <img id="icon" src="" alt="icon">
-                <button onClick="window.location.reload();" class="refresh"><i class="fa fa-refresh"></i></button>
-            </div>
-          </div>
-        </div>
-
-
-
-        <section class="weather-part col-sm-3">
-
-            <div class="temp">
-                <span class="city"></span>
-            </div>
-            <div class="weather"><span class="deg">°</span>C</div>
-            <div class="location">
-                <i class='bx bx-map'></i>
-                <span class="cityy"> </span>
-                <p>, <span class="countr"> </span></p>
-
-            </div>
-            <div class="bottom-details">
-                <div class="column feels">
-                    <i class='bx bxs-thermometer'></i>
-                    <div class="details">
-                        <div class="temp">
-                            <span class="numb-2"></span>
-                            <span class="degr">°</span>C
+            <div class="navbar-nav m-auto py-0">
+                        <div id="logo">
+                            <span>MovieHub</span>
                         </div>
-        
+                    </div>
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="web_fies/film.html" class="nav-item nav-link">Film</a>
+                    <a href="web_fies/tvshow.html" class="nav-item nav-link">TV-Show</a>
+                    <a href="web_fies/anime.html" class="nav-item nav-link">Anime</a>
+                    <a href="web_fies/cartoons.html" class="nav-item nav-link">Cartoon</a>
+                    <a href="web_fies/drama.html" class="nav-item nav-link">K-Drama</a>
+
+
+    </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid mb-5">
+        <div class="container text-center py-5">
+            <h1 class="text-primary mb-4">Welcome to MovieHub</h1>
+            <h1 class="text-white display-3 mb-5">Your gid for tonight</h1>
+            <div class="mx-auto" style="width: 100%; max-width: 600px;">
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 pb-4 pb-lg-0">
+                <a href="https://youtu.be/1jkw2JPCl18"><img class="img-fluid w-100" src="DCLeagueOfPets.jpg" alt=""></a>
+                </div>
+                <div class="col-lg-7">
+                    <h6 class="text-primary text-uppercase font-weight-bold">Premier 2022</h6>
+                    <h1 class="mb-4">DC League Of Super-pets</h1>
+                    <p class="mb-4">Krypto the Super-Dog and Superman are inseparable best friends, sharing the same superpowers and fighting crime side by side in Metropolis. However, Krypto must master his own powers for a rescue mission when Superman is kidnapped.</p>
+                    <h3 class="mb-4">Directors: Jared SternSam Levine</h3>
+                    <h3 class="mb-4"> Writers: Jared SternJohn Whittington</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <section id="main-slider">
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <!---1--------->
+                <div class="swiper-slide">
+                    <div class="main-slider-box">
+                        <div class="main-slider-img">
+                            <img src="https://i.pinimg.com/550x/fb/69/c6/fb69c63e00426d7e8e1f5ac9bc86c4e9.jpg" alt="Poster">
+                        </div>
+                        <div class="main-slider-text">
+                            <span class="quality">Full HD</span>
+
+                            <div class="bottom-text">
+                                <div class="movie-name">
+                                    <span>2016</span>
+                                    <strong>A Silent Voice</strong>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="column humidity">
-                    <i class='bx bxs-droplet-half'></i>
-                    <div class="details">
-                        <span class="humidityy"></span>
+                <!---------2----->
+                <div class="swiper-slide">
+                    <div class="main-slider-box">
+                        <div class="main-slider-img">
+                            <img src="https://i0.wp.com/neplych.com/wp-content/uploads/2022/04/The-Afterparty-TV-Series-Poster.jpg?fit=387%2C574&ssl=1" alt="Poster">
+                        </div>
+                        <div class="main-slider-text">
+                            <span class="quality">Full HD</span>
 
+                            <div class="bottom-text">
+                                <div class="movie-name">
+                                    <span>2022</span>
+                                    <strong>The After Party</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="main-slider-box">
+                        <div class="main-slider-img">
+                            <img src="https://media.interaksyon.com/wp-content/uploads/2020/10/start-up-poster.jpg" alt="Poster">
+                        </div>
+                        <div class="main-slider-text">
+                            <span class="quality">Full HD</span>
+
+                            <div class="bottom-text">
+                                <div class="movie-name">
+                                    <span>2020</span>
+                                    <strong>Start-Up</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="main-slider-box">
+                        <div class="main-slider-img">
+                            <img src="https://i.pinimg.com/236x/98/66/bc/9866bc6f1ae7f55b23167784dd62a48e.jpg" alt="Poster">
+                        </div>
+                        <div class="main-slider-text">
+                            <span class="quality">Full HD</span>
+
+                            <div class="bottom-text">
+                                <div class="movie-name">
+                                    <span>2022</span>
+                                    <strong>DC league ofSuper-pets</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="main-slider-box">
+                        <div class="main-slider-img">
+                            <img src="https://cimgr.thebeaulife.co/cimg/f_png,w_400,c_fit/img/_forecasting-love-and-weather-plot-cast-1.png" alt="Poster">
+                        </div>
+                        <div class="main-slider-text">
+                            <span class="quality">Full HD</span>
+
+                            <div class="bottom-text">
+                                <div class="movie-name">
+                                    <span>2022</span>
+                                    <strong>Forecasting Love and Weather</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="main-slider-box">
+                        <a href="#" class="main-slider-overlay">
+                            <i class="fas fa-play"></i>
+                        </a>
+                        <div class="main-slider-img">
+                            <img src="https://i.pinimg.com/474x/0d/b7/bc/0db7bc87c146dfcb3c1e31a61c02cbfe.jpg" alt="Poster">
+                        </div>
+                        <div class="main-slider-text">
+                            <span class="quality">Full HD</span>
+
+                            <div class="bottom-text">
+                                <div class="movie-name">
+                                    <span>2019</span>
+                                    <strong>The Promised Neverland</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="slider-btns">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="latest">
+        <div class="latest-heading">
+            <h1>Latest </h1>
+        </div>
+
+        <div class="post-container">
+            <div class="post-box">
+                <div class="post-img">
+                    <img src="https://www.themoviedb.org/t/p/original/lLidDKUYF5pcmH7zaM6J6nyRQGG.jpg" alt="">
+                </div>
+                <div class="main-slider-text">
+                    <span class="quality">Full HD</span>
+
+                    <div class="bottom-text">
+                        <div class="movie-name">
+                            <span>2015-2022</span>
+                            <a href="https://youtu.be/kQuTAPWJxNo">The Expanse</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-        </section>
-          
-    </div>
-    </div>
-</footer>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-<script type="text/javascript">
-fetch('https://api.openweathermap.org/data/2.5/weather?id=1526273&appid=09848e7f15aa0d467de2662f4ab2c081&units=metric')
-    .then(function (resp) {return resp.json() })
-    .then(function (data) {
-        console.log(data);
-        document.querySelector('.city').textContent = data.name;
-        document.querySelector('.deg').textContent = data.main.temp;
-        document.querySelector('.degr').textContent = data.main.feels_like;
-        document.querySelector('.humidityy').textContent = data.main.humidity;
-        document.querySelector('.cityy').textContent = data.name;
-        document.querySelector('.countr').textContent = data.sys.country;
+            <div class="post-box">
+                <div class="post-img">
+                    <img src="https://pbs.twimg.com/media/FNLNGSSXEAE7-5_?format=jpg&name=medium" alt="">
+                </div>
+                <div class="main-slider-text">
+                    <span class="quality">Full HD</span>
 
-    })
+                    <div class="bottom-text">
+                        <div class="movie-name">
+                            <span>2022</span>
+                            <a href="https://youtu.be/Oqd2C3oZkBU">Spy x Family</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-box">
+                <div class="post-img">
+                    <img src="https://0.soompi.io/wp-content/uploads/2022/02/06221922/A-Business-Proposal-2.jpeg" alt="">
+                </div>
+                <div class="main-slider-text">
+                    <span class="quality">Full HD</span>
+
+                    <div class="bottom-text">
+                        <div class="movie-name">
+                            <span>2022</span>
+                            <a href="https://youtu.be/M-PHcxPyasA">Business Proposal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-box">
+                <div class="post-img">
+                    <img src="https://cdn.cinematerial.com/p/297x/osu2gdkh/tom-and-jerry-movie-poster-md.jpg?v=1614079055" alt="">
+                </div>
+                <div class="main-slider-text">
+                    <span class="quality">Full HD</span>
+
+                    <div class="bottom-text">
+                        <div class="movie-name">
+                            <span>2021</span>
+                            <a href="https://youtu.be/kP9TfCWaQT4">Tom & Jerry: The Movie</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-box">
+                <div class="post-img">
+                    <img src="https://upload.wikimedia.org/wikipedia/ru/8/88/Sono_Bisque_Doll_wa_Koi_wo_Suru.jpg" alt="">
+                </div>
+                <div class="main-slider-text">
+                    <span class="quality">Full HD</span>
+
+                    <div class="bottom-text">
+                        <div class="movie-name">
+                            <span>2022</span>
+                            <a href="https://youtu.be/GynqZk_BaNU">My Dress-Up Darling</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-box">
+                <div class="post-img">
+                    <img src="https://static1.showtimes.com/poster/660x980/rumble-159462.jpg" alt="">
+                </div>
+                <div class="main-slider-text">
+                    <span class="quality">Full HD</span>
+
+                    <div class="bottom-text">
+                        <div class="movie-name">
+                            <span>2021</span>
+                            <a href="https://youtu.be/h3zG5OLexjg">Rumble</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-box">
+                <div class="post-img">
+                    <img src="https://cdn.cinematerial.com/p/297x/qxogsmwt/the-endgame-movie-poster-md.jpg?v=1644263743" alt="">
+                </div>
+                <div class="main-slider-text">
+                    <span class="quality">Full HD</span>
+
+                    <div class="bottom-text">
+                        <div class="movie-name">
+                            <span>2022</span>
+                            <a href="https://youtu.be/NtkbmqOqY0c">The Endgame</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-box">
+                <div class="post-img">
+                    <img src="https://i.pinimg.com/originals/4c/a0/d0/4ca0d0d698ecd50d3b3aafbd85ff773f.jpg" alt="">
+                </div>
+                <div class="main-slider-text">
+                    <span class="quality">Full HD</span>
+
+                    <div class="bottom-text">
+                        <div class="movie-name">
+                            <span>2020</span>
+                            <a href="https://youtu.be/kCqhd_u2-xY">Tale of the Nine Tailed</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-box">
+                <div class="post-img">
+                    <img src="https://www.kino-teatr.ru/movie/poster/152345/120639.jpg" alt="">
+                </div>
+                <div class="main-slider-text">
+                    <span class="quality">Full HD</span>
+
+                    <div class="bottom-text">
+                        <div class="movie-name">
+                            <span>2022</span>
+                            <a href="https://youtu.be/fb6GZohsTSY">Suspicion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="post-box">
+                <div class="post-img">
+                    <img src="https://i.pinimg.com/736x/5d/b0/67/5db067c12c8d34c0e5718d86cbfe1d84.jpg" alt="">
+                </div>
+                <div class="main-slider-text">
+                    <span class="quality">Full HD</span>
+
+                    <div class="bottom-text">
+                        <div class="movie-name">
+                            <span>2020</span>
+                            <a href="https://youtu.be/EiIEC6i78XA">Memorist</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="post-box">
+                <div class="post-img">
+                    <img src="https://featuredanimation.com/wp-content/uploads/2021/06/Luca-waving-half-under-water-Pixar-Movie-Poster-2021.jpg" alt="">
+                </div>
+                <div class="main-slider-text">
+                    <span class="quality">Full HD</span>
+
+                    <div class="bottom-text">
+                        <div class="movie-name">
+                            <span>2021</span>
+                            <a href="https://youtu.be/0hgHY9k-44U">Luca</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="post-box">
+                <div class="post-img">
+                    <img src="https://www.film.ru/sites/default/files/movies/posters/50287275-2150067.jpg" alt="">
+                </div>
+                <div class="main-slider-text">
+                    <span class="quality">Full HD</span>
+
+                    <div class="bottom-text">
+                        <div class="movie-name">
+                            <span>2022</span>
+                            <a href="https://youtu.be/6Ngw-g6aMmA">Vampire In The Garden</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-7 col-md-6">
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <div class="col-8">
+                            <div id="title">MovieHUB </div>
+                            <p>Movie & series recommendation service.<br>All rights to the provided movies & series belong to their respective owners.</p>
+                            <div id="buttons">
+                                <a href="https://vk.com" title="Vk group" target="_blank">
+                                    <img src="https://img.icons8.com/material/36/ffffff/vk-circled.png" alt="Vk" title="Vkontakte">
+                                </a>
+                                <a href="https://facebook.com" title="Facebook group" target="_blank">
+                                    <img src="https://img.icons8.com/material/36/ffffff/facebook-new.png" alt="FB" title="Facebook">
+                                </a>
+                                <a href="https://instagram.com" title="Instagram" target="_blank">
+                                    <img src="https://img.icons8.com/material/36/ffffff/instagram-new--v1.png" alt="Inst" title="Instagram">
+                                </a>
+                                <a href="https://twitter.com" title="Twitter" target="_blank">
+                                    <img src="https://img.icons8.com/material/36/ffffff/twitter-squared.png" alt="TWT" title="Twitter">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div id="block2">
+                            <div class="col-4">
+                                <div id="Contact us">Contact us</div>
+                                <div id="Contacts info">
+                                    <img src="https://img.icons8.com/material/24/ffffff/whatsapp--v1.png" alt="WhatsApp"/> +7 701 735 12 26 <br>
+                                    <img src="https://img.icons8.com/material/24/ffffff/sent--v1.png" alt="Telegram"/> @moviehub <br>
+                                    <img src="https://img.icons8.com/material/24/ffffff/gmail--v1.png" alt="E-mail"/> moviehub.aitu@gmail.com
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+
+    let swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+        },
+    });
 </script>
 </html>
