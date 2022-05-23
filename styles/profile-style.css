@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', Sans-Serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../MovieHub/images/profileback.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-pic{
+    width: 150px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    padding: 6px;
+}
+.profile-box{
+    width: 230px;
+    height: 500px;
+    margin-right: 440px;
+    background-color: black;
+    text-align: center;
+    padding: 40px 90px;
+    color: #FFFFFF;
+    position: relative;
+    border-radius: 20px;
+}
+.menu-icon{
+    width: 25px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+}
+.setting-icon{
+    width: 30px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+ul {
+    list-style-type: none;
+    margin-left: 20px;
+    padding: 0;
+    width: 200px;
+    background-color: black;
+}
+li a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+.login{
+    margin: auto;
+    margin-top: 24px;
+    width: 30%;
+    height: 90vh;
+    background: black;
+    padding: 10px;
+    position: absolute;
+    right: 220px;
+    top: 0px;
+    border-radius: 10px;
+}
+form {
+    margin-top: 130px;
+    width: 300px;
+    margin-left: 20px;
+    color: white;
+}
+
+form label {
+    display: flex;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+form input {
+    background-color: black;
+    width: 280px;
+    height: 40px;
+    display: block;
+    border: none;
+    margin-left: 30px;
+    font-size: medium;
+    color: gray;
+    transition: all 0.1s ease-in-out;
+    border-bottom: 4px solid white;
+}
+#sub_butt {
+    width: 40%;
+    margin-top: 80px;
+    margin-left: 230px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
