@@ -1,0 +1,87 @@
+.main-login {
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+    background-image: url("../../MovieHub/images/backgraund.jpg");
+}
+.login-contain {
+    height: 80vh;
+    width: 360px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 2rem auto;
+    box-shadow: 0.5rem 0.5rem 2rem -1rem #3a3939;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-side {
+    margin-left: 250px;
+    margin-right: 400px;
+    height: 90%;
+    width: 70%;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-class {
+    height: 4.5rem;
+    margin-bottom: 30px;
+}
+#img-id {
+    margin-left: 140px;
+    height: 160%;
+    object-fit: cover;
+}
+input {
+    background-color: black;
+    width: 270px;
+    height: 40px;
+    display: block;
+    border: none;
+    margin-left: 50px;
+    padding: 0.2rem 1rem;
+    font-size: medium;
+    color: gray;
+    transition: all 0.1s ease-in-out;
+    border-bottom: 4px solid white;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}
+input:hover {
+    outline: 0.5px solid white;
+    box-shadow: 2px 2px 9px -2px white;
+}
+label {
+    margin-top: 20px;
+    height: 26px;
+    display: block;
+    text-align: left;
+    margin-left: 50px;
+    font-size: medium;
+    color: white;
+}
+#sub_butt {
+    width: 30%;
+    margin-top: 30px;
+    margin-left: 165px;
+    background: grey;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+#sub_butt:hover {
+    transform: translateY(-5px);
+    box-shadow: 0.5rem 0.5rem 1rem 0.1rem gray;
+}
