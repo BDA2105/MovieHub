@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign-Up</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+	<div class="signup-box">
+		<div class="img-class">
+			<img src="3logo.png" id="img-id" alt="" />
+		</div>
+		<h1>Sign-Up</h1>
+		<form id="reg-form">
+			<label>Full Name</label>
+			<input type="text" id="username" placeholder="Enter full name..." />
+			<label>Email</label>
+			<input type="email" id="email" placeholder="Enter your email..." />
+			<label>Country</label>
+			<input type="text" id="country" placeholder="Enter your country..." />
+			<label>Password</label>
+			<input type="password" id="password" placeholder="Enter password..." />
+			<input type="submit" value="Submit"/>
+			<div id="date"/>
+
+
+		</form>
+	</div>
+
+	<p class="para-2">
+		Already have an account? <a href="login.html">Login here</a>
+	</p>
+	<script src="../../../../../5.1/registration/node-auth-youtube-master/server.js"> </script>
+
+	<script>
+		const date = new Date()
+			const form = document.getElementById('reg-form')
+		        form.addEventListener('submit', registerUser)
+			    async function registerUser(event) {
+				event.preventDefault()
+				const username = document.getElementById('username').value
+				const email = document.getElementById('email').value
+				const country = document.getElementById('country').value
+				const password = document.getElementById('password').value
+				document.getElementById('date').innerHTML = date
+
+
+				const result = await fetch('/api/register', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						username,
+						email,
+						password,
+						country,
+						date
+					})
+				}).then((res) => res.json())
+
+				if (result.status === 'ok') {
+
+					alert('You have successfully registered!')
+				} else {
+					alert(result.error)
+				}
+			}
+		</script>
+	</body>
+</html>
