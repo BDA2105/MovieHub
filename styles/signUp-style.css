@@ -1,5 +1,5 @@
 body {
-    background-image: url("../../MovieHub/images/backgraund.jpg");
+    background-image: url("../images/backgraund.jpg");
 }
 
 .signup-box {
@@ -55,7 +55,7 @@ form input {
     transition: all 0.1s ease-in-out;
     border-bottom: 4px solid white;
 }
-input[type="button"] {
+button[type="submit"] {
     width: 270px;
     height: 35px;
     margin-top: 50px;
@@ -63,6 +63,11 @@ input[type="button"] {
     background-color: gray;
     color: white;
     font-size: 18px;
+    position: relative;
+    top: 100%;
+    left: 55%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 p {
     text-align: center;
@@ -73,8 +78,19 @@ p {
     text-align: center;
     color: white;
     font-size: 20px;
-    margin-top: -50px;
+    margin-top: -40px;
 }
 .para-2 a {
     color: blue;
+}
+
+.alert {
+    color: #a94442;
+    background-color: #f2dede;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    width : 50%;
 }

@@ -1,9 +1,7 @@
-.main-login {
-    min-height: 100vh;
-    min-width: 100vw;
-    overflow-x: hidden;
-    background-image: url("../../MovieHub/images/backgraund.jpg");
+body {
+    background-image: url("../images/backgraund.jpg");
 }
+
 .login-contain {
     height: 80vh;
     width: 360px;
@@ -84,4 +82,31 @@ label {
 #sub_butt:hover {
     transform: translateY(-5px);
     box-shadow: 0.5rem 0.5rem 1rem 0.1rem gray;
+}
+
+p {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 15px;
+}
+
+.para-2 {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: -50px;
+}
+.para-2 a {
+    color: blue;
+}
+
+.alert {
+    color: #a94442;
+    background-color: #f2dede;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    width : 50%;
 }
