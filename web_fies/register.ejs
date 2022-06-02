@@ -12,20 +12,14 @@
 </head>
 <body>
 
-<% if (users.errors) {%>
-    <% users.errors.forEach(function(error) { %>
-        <div class="alert alert-danger">
-            <%= error.msg %>
-        </div>
-    <% });%>
-<% }%>
+
 
 <div class="signup-box">
     <div class="img-class">
         <img src="../images/3logo.png" id="img-id" alt="" />
     </div>
 
-    <form method="post" action="register">
+    <form method="post" action="/users/register">
         <label>Full Name</label>
         <input id="name" name="name" placeholder="Enter full name..." type="text"/>
         <label>Username</label>
