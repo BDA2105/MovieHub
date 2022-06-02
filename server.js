@@ -20,8 +20,8 @@ async function main() {
 
 //View engine setup
 app.set('views', path.join(__dirname, ''));
-app.set('view engine','html');
-app.engine('html', require('ejs').renderFile);
+app.set('view engine','ejs');
+app.engine('ejs', require('ejs').renderFile);
 
 //Set public folder
 //the static middleware To render static files
