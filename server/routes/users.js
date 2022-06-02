@@ -10,7 +10,7 @@ const User = require('../models/user');
  * GET register
  */
 router.get('/register', function (req, res) {
-    res.render('web_fies/register.html');
+    res.render('web_fies/register.ejs');
 });
 
 /*
@@ -30,10 +30,13 @@ router.post('/register', function (req, res) {
     req.checkBody('password', 'Password is required!').notEmpty();
     req.checkBody('password2', 'Passwords do not match!').equals(password);
 
-    var errors = req.validationErrors();
+    const errors = req.validationErrors();
+    module.exports={
+        errors: errors
+    }
 
     if (errors) {
-        res.render('web_fies/register.html', {
+        res.render('web_fies/register.ejs', {
             errors: errors,
             user: null,
         });
@@ -84,7 +87,7 @@ router.get('/login', function (req, res) {
 
     if (res.locals.user) res.redirect('/');
 
-    res.render('web_fies/login.html', {
+    res.render('web_fies/login.ejs', {
         title: 'Log in'
     });
 

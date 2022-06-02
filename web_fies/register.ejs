@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
     <link rel="stylesheet" href="../styles/signUp-style.css" />
-    <link
-    />
+    <link/>
+    <script>
+        const users = require('server/routes/users.js')
+    </script>
 </head>
 <body>
 
-
+<% if (users.errors) {%>
+    <% users.errors.forEach(function(error) { %>
+        <div class="alert alert-danger">
+            <%= error.msg %>
+        </div>
+    <% });%>
+<% }%>
 
 <div class="signup-box">
     <div class="img-class">
