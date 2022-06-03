@@ -9,33 +9,19 @@
 <script src="../script/profile.js"></script>
 <div class="container">
     <div class="profile-box">
-        <img src="../images/minyoongi.jpg" class="profile-pic">
-        <h3>Min Yoongi</h3>
-        <p>Korein artist, idol and raper</p>
+        <h1><%= username%></h1>
+        <h4>Email: <%= email%></h4>
+        <h4>Name: <%= name%></h4>
         <ul>
             <li><a href='/'>Home</a></li>
-            <li><a href="web_fies/filter.html">Catalog</a></li>
+            <li><a href='/filter'>Catalog</a></li>
             <li><a href="#liked">Liked</a></li>
-            <li><a href="#setting">Setting</a></li>
+            <li><a href='/users/login'>Loug Out</a></li>
         </ul>
     </div>
 </div>
 <div class="login">
-    <img src="../images/menuicon.jpg" class="menu-icon">
-    <img src="../images/setting.jpg" class="setting-icon">
     <form>
-        <label>Full Name</label>
-        <label id="name">Min Yoongi
-            <script>
-                document.getElementById("name").innerHTML=data['"name"']
-            </script>
-        </label>
-        <label>Nickname</label>
-        <input type="text" placeholder="kitty" />
-        <label>Email</label>
-        <input type="email" placeholder="minyoongi@gmail.com" />
-        <button type="submit" id="sub_butt">Log out</button>
-    </form>
 </div>
 </body>
 </html>

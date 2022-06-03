@@ -1,11 +1,14 @@
-const express = require('express');
+const express = require( 'express')
 const router = express.Router();
-const passport = require('passport');
-const bcrypt = require('bcryptjs');
+const passport = require ('passport')
+const bcrypt = require ('bcryptjs')
+const initializePassport = require('../config/passport.js')
+initializePassport(passport)
 
 // Get Users model
-const User = require('../models/user');
+const User = require ('../models/user.js')
 
+let errors;
 /*
  * GET register
  */
@@ -30,10 +33,7 @@ router.post('/register', function (req, res) {
     req.checkBody('password', 'Password is required!').notEmpty();
     req.checkBody('password2', 'Passwords do not match!').equals(password);
 
-    const errors = req.validationErrors();
-    module.exports={
-        errors: errors
-    }
+    errors = req.validationErrors();
 
     if (errors) {
         res.render('web_fies/register.ejs', {
@@ -85,38 +85,25 @@ router.post('/register', function (req, res) {
  */
 router.get('/login', function (req, res) {
 
+    res.render('web_fies/login.ejs');
+
     if (res.locals.user) res.redirect('/');
-
-    res.render('web_fies/login.ejs', {
-        title: 'Log in'
-    });
-
 });
 
 /*
  * POST login
  */
-router.post('/login', function (req, res, next) {
-
-    passport.authenticate('local', {
+router.post('/login', passport.authenticate('local', {
         successRedirect: '/',
         failureRedirect: '/users/login',
-        failureFlash: true
-    })(req, res, next);
-
-});
+        failureFlash: true}),
+    function (req, res, next){
+    res.redirect('/')
+    });
 
 /*
  * GET logout
  */
-router.get('/logout', function (req, res) {
-
-    req.logout();
-
-    req.flash('success', 'You are logged out!');
-    res.redirect('/users/login');
-
-});
 
 // Exports
 module.exports = router;

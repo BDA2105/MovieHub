@@ -1,7 +1,5 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
     <meta charset="utf-8">
     <title>MovieHub</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -18,10 +16,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="server/routes/users.js"></script>
-</head>
+    <script src="server/models/user.js"></script>
+    <script src="server.js"></script>
+    <script src="server/config/auth.js"></script>
+    <script src="server/config/passport.js"></script>
 
-<body>
+
+
 <!-- Navbar Start -->
 <div class="container-fluid p-0">
     <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
@@ -33,11 +36,11 @@
 
             <ul class="menu">
                 <li><a href='/'>Home</a></li>
-                <li><a href="web_fies/filter.html">Filter</a></li>
-                <li><a href='/profile'>Profile</a></li>
-                    <li><a href='/users/register'>Register</a></li>
-                    <li><a href="/users/login">Log in</a></li>
+                <li><a href='/profile'><%= username%></a></li>
+                <li><a href='/filter'>Filter</a></li>
                 <li><a href='/pricing_table'>Premium</a></li>
+                <li><a href='/users/login'>Lougout</a></li>
+
             </ul>
         </div>
 
@@ -46,11 +49,12 @@
                 <span>MovieHub</span>
             </div>
         </div>
+        <a class="nav-item nav-link ">Hi, <%= username%></a>
         <a href='/' class="nav-item nav-link ">Home</a>
         <a href='/film' class="nav-item nav-link">Film</a>
         <a href='tvshow' class="nav-item nav-link">TV-Show</a>
-        <a href='/anime' class="nav-item nav-link active">Anime</a>
-        <a href='/cartoons' class="nav-item nav-link active">Cartoon</a>
+        <a href='/anime' class="nav-item nav-link">Anime</a>
+        <a href='/cartoons' class="nav-item nav-link">Cartoon</a>
         <a href='/drama' class="nav-item nav-link">K-Drama</a>
         <a href='/soundtrack' class="nav-item nav-link">Soundtrack</a>
 
@@ -76,7 +80,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5 pb-4 pb-lg-0">
-                <a href="https://youtu.be/1jkw2JPCl18"><img class="img-fluid w-100" src="DCLeagueOfPets.jpg" alt=""></a>
+                <a href="https://youtu.be/1jkw2JPCl18"><img class="img-fluid w-100" src="/images/DCLeagueOfPets.jpg" alt=""></a>
             </div>
             <div class="col-lg-7">
                 <h6 class="text-primary text-uppercase font-weight-bold">Premier 2022</h6>
@@ -465,7 +469,7 @@
 
 <!-- Back to Top -->
 <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-</body>
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
 
@@ -505,4 +509,4 @@
         },
     });
 </script>
-</html>
+

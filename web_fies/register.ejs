@@ -6,13 +6,17 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="../styles/signUp-style.css" />
     <link/>
-    <script>
-        const users = require('server/routes/users.js')
-    </script>
+
 </head>
 <body>
-
-
+<% if (errors) {%>
+    <% errors.forEach(function(error) { %>
+        <div class="alert alert-danger">
+            <%= error.msg %>
+        </div>
+    <% });%>
+<% }%>
+<div class="container">
 
 <div class="signup-box">
     <div class="img-class">
@@ -20,16 +24,31 @@
     </div>
 
     <form method="post" action="/users/register">
-        <label>Full Name</label>
-        <input id="name" name="name" placeholder="Enter full name..." type="text"/>
-        <label>Username</label>
-        <input id="username" name="username" placeholder="Enter username..." type="text"/>
-        <label>Email</label>
-        <input id="email" name="email" placeholder="Enter your email..." type="email"/>
-        <label>Password</label>
-        <input id="password" name="password" placeholder="Enter password..." type="password"/>
-        <label>Confirm Password</label>
-        <input id="confirmPassword" name="password2" placeholder="Confirm password..." type="password"/>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="name" class="form-control" placeholder="Name">
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" name="email" class="form-control" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" name="username" class="form-control" placeholder="Username">
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" class="form-control"  placeholder="Password">
+        </div>
+
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" name="password2" class="form-control"  placeholder="Confirm Password">
+        </div>
+
         <button type="submit" class="btn btn-default">Sigh Up</button>
     </form>
 
@@ -37,6 +56,6 @@
 <p class="para-2">
     Already have an account? <a href='/users/login'>Login here</a>
 </p>
-
+</div>
 </body>
 </html>

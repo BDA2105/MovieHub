@@ -1,13 +1,12 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="../styles/log-style.css" rel="stylesheet">
   <title>Login</title>
-</head>
-<body>
-
+  <div id="messages" class="messages">
+  <%if (messages.error)%>
+    <%= messages.error%></div>
 
 <div class='main-login'>
   <div class="login-contain">
@@ -17,10 +16,15 @@
       </div>
 
       <form id="login" method="post" action="/users/login">
-        <label name="username" >Username</label>
-        <input id="username" name="username" placeholder="Enter username..." type="text"/>
-        <label pwd1 >Password</label>
-        <input placeholder="Enter password" type="password" autoComplete="false" id="pwd1"/>
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" name="username" class="form-control" placeholder="Username">
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" name="password" class="form-control"  placeholder="Password">
+        </div>
         <button type="submit" id="sub_butt">Login</button>
       </form>
     </div>
@@ -29,6 +33,3 @@
 <p class="para-2">
   Don't have account? <a href='/users/register'>Register here</a>
 </p>
-
-</body>
-</html>

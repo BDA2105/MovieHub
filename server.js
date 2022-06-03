@@ -3,20 +3,22 @@ const path = require('path');
 const mongoose = require('mongoose');
 const server = require('./server/config/database');
 const bodyParser = require('body-parser');
-const session = require('express-session');
 const expressValidator = require('express-validator')
 const passport = require('passport');
-const ejs = require('ejs')
+const flash = require('express-flash')
+const session = require('express-session');
+const methodOverride = require('method-override')
 
 //Init app
 const app = express();
 
 //Connect to DB
-main().catch(err => console.log(err));
-
-async function main() {
-    await mongoose.connect(server.database);
-}
+mongoose.connect(server.database);
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+    console.log('Connected to MongoDB');
+});
 
 //View engine setup
 app.set('views', path.join(__dirname, ''));
@@ -27,17 +29,34 @@ app.engine('ejs', require('ejs').renderFile);
 //the static middleware To render static files
 app.use(express.static(path.join(__dirname, '')));
 
+// Set global errors variable
+app.locals.errors = null;
+
 //Body Parser Middleware
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-//Express Session Middleware
+// Get user Model
+const User = require('./server/models/user.js');
+
+// Get all categories to pass to header.ejs
+User.find(function (err, user) {
+    if (err) {
+        console.log(err);
+    } else {
+        app.locals.users = user;
+    }
+});
+
+// Express Flash middleware
+app.use(flash());
+// Express Session middleware
 app.use(session({
     secret: 'keyboard cat',
     resave: false,
-    saveUninitialized: true,
-    cookie: { secure: true }
-}))
+    saveUninitialized: false
+    //cookie: { secure: true }
+}));
 
 //Express Validator Middleware
 app.use(expressValidator({
@@ -95,6 +114,13 @@ const adminPages = require('./server/routes/admin_pages.js');
 app.use('/users', users);
 app.use('/admin/pages', adminPages);
 app.use('/', pages);
+
+//Log Out
+app.delete('/logout',(req, res) => {
+    req.logOut()
+    res.redirect('/login')
+})
+app.use(methodOverride('_method'))
 
 //Start the server
 const port = 9000
