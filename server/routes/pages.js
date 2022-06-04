@@ -64,6 +64,10 @@ router.get('/filter', checkAuthenticated,function (req,res){
     res.render('web_fies/filter.ejs', {username: req.user.username})
 });
 
+//Get posts
+router.get('/posts', checkAuthenticated,function (req,res){
+    res.render('web_fies/posts.ejs', {username: req.user.username})
+});
 function checkAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
         return next()

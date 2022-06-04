@@ -7,7 +7,7 @@ const expressValidator = require('express-validator')
 const passport = require('passport');
 const flash = require('express-flash')
 const session = require('express-session');
-const methodOverride = require('method-override')
+
 
 //Init app
 const app = express();
@@ -109,18 +109,12 @@ app.use(passport.session());
 //Set routes
 const users = require('./server/routes/users.js');
 const pages = require('./server/routes/pages.js');
-const adminPages = require('./server/routes/admin_pages.js');
+
 
 app.use('/users', users);
-app.use('/admin/pages', adminPages);
+
 app.use('/', pages);
 
-//Log Out
-app.delete('/logout',(req, res) => {
-    req.logOut()
-    res.redirect('/login')
-})
-app.use(methodOverride('_method'))
 
 //Start the server
 const port = 9000

@@ -24,7 +24,7 @@
                 <li><a href='/profile'><%= username%></a></li>
                 <li><a href='/filter'>Filter</a></li>
                 <li><a href='/pricing_table'>Premium</a></li>
-                <li><a href='/users/login'>Lougout</a></li>
+                <li><a href='/users/login'>Logout</a></li>
             </ul>
         </div>
 
@@ -34,6 +34,7 @@
             </div>
         </div>
         <a class="nav-item nav-link ">Hi, <%= username%></a>
+        <a href='/posts' class="nav-item nav-link ">Posts</a>
         <a href='/' class="nav-item nav-link ">Home</a>
         <a href='/film' class="nav-item nav-link">Film</a>
         <a href='tvshow' class="nav-item nav-link">TV-Show</a>
@@ -41,31 +42,15 @@
         <a href='/cartoons' class="nav-item nav-link">Cartoon</a>
         <a href='/drama' class="nav-item nav-link">K-Drama</a>
         <a href='/soundtrack' class="nav-item nav-link">Soundtrack</a>
+        <input type="checkbox" id="mode">
     </nav>
 </div>
 
 
-<div class="pricing-plan-container">
-    <section class="pricing-plan">
-        <div class="pricing-plan-header">
-            <h1 class="pricing-plan-title">Basic</h1>
-        </div>
-        <div class="pricing-plan-description">
-            <ul class="pricing-plan-list">
-                <li class="pricing-plan-feature">Basic Information</li>
-                <li class="pricing-plan-feature">Additional Pictures</li>
-                <li class="pricing-plan-feature">Good Quality</li>
-            </ul>
-        </div>
-        <div class="pricing-plan-actions">
-            <p class="pricing-plan-cost">$5</p>
-            <p class="pricing-plan-text">per month</p>
-            <form action="pay.ejs" target="_blank">
-                <button>Add to card</button>
-            </form>
-        </div>
+<script src="https://www.paypal.com/sdk/js?client-id=AZoC8HtnXJSw6Qk6KHp0gRuBFbKBUBAkiLzbQf6caseX_rll6SgES0GaXtM7Wegw06mpzvwl6DyJ2S6P&currency=USD"></script>
 
-    </section>
+<div class="pricing-plan-container">
+
     <section class="pricing-plan pricing-plan-highlighted">
         <div class="pricing-plan-header">
             <h1 class="pricing-plan-title">Premium</h1>
@@ -81,33 +66,79 @@
         <div class="pricing-plan-actions">
             <p class="pricing-plan-cost">$15</p>
             <p class="pricing-plan-text">per month</p>
-            <form action="pay.ejs" target="_blank">
-                <button>Add to card</button>
+            <form>
+                <div id="paypal-button-container" ></div>
             </form>
         </div>
-
-    </section>
-    <section class="pricing-plan">
-        <div class="pricing-plan-header">
-            <h1 class="pricing-plan-title">Standard</h1>
-        </div>
-        <div class="pricing-plan-description">
-            <ul class="pricing-plan-list">
-                <li class="pricing-plan-feature">Links To Trailers</li>
-                <li class="pricing-plan-feature">Information About The Cast</li>
-                <li class="pricing-plan-feature">The Rest Of The Work Of The Same Producers</li>
-                <li class="pricing-plan-feature">Updating Series Once A Month</li>
-            </ul>
-        </div>
-        <div class="pricing-plan-actions">
-            <p class="pricing-plan-cost">$10</p>
-            <p class="pricing-plan-text">per month</p>
-            <form action="pay.ejs" target="_blank">
-                <button>Add to card</button>
-            </form>
-        </div>
-
-    </section>
-</div>
+    </div>
 </body>
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+    <div class="row pt-5">
+        <div class="col-lg-7 col-md-6">
+            <div class="row">
+                <div class="col-md-6 mb-5">
+                    <div class="col-8">
+                        <div id="title">MovieHUB </div>
+                        <p>Movie & series recommendation service.<br>All rights to the provided movies & series belong to their respective owners.</p>
+                        <div id="buttons">
+                            <a href="https://vk.com" title="Vk group" target="_blank">
+                                <img src="https://img.icons8.com/material/36/ffffff/vk-circled.png" alt="Vk" title="Vkontakte">
+                            </a>
+                            <a href="https://facebook.com" title="Facebook group" target="_blank">
+                                <img src="https://img.icons8.com/material/36/ffffff/facebook-new.png" alt="FB" title="Facebook">
+                            </a>
+                            <a href="https://instagram.com" title="Instagram" target="_blank">
+                                <img src="https://img.icons8.com/material/36/ffffff/instagram-new--v1.png" alt="Inst" title="Instagram">
+                            </a>
+                            <a href="https://twitter.com" title="Twitter" target="_blank">
+                                <img src="https://img.icons8.com/material/36/ffffff/twitter-squared.png" alt="TWT" title="Twitter">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="block2">
+                        <div class="col-4">
+                            <div id="Contact us">Contact us</div>
+                            <div id="Contacts info">
+                                <img src="https://img.icons8.com/material/24/ffffff/whatsapp--v1.png" alt="WhatsApp"/> +7 701 735 12 26 <br>
+                                <img src="https://img.icons8.com/material/24/ffffff/sent--v1.png" alt="Telegram"/> @moviehub <br>
+                                <img src="https://img.icons8.com/material/24/ffffff/gmail--v1.png" alt="E-mail"/> moviehub.aitu@gmail.com
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+<script>
+    paypal.Buttons({
+        // Sets up the transaction when a payment button is clicked
+        createOrder: (data, actions) => {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '15.0' // Can also reference a variable or function
+                    }
+                }]
+            });
+        },
+        // Finalize the transaction after payer approval
+        onApprove: (data, actions) => {
+            return actions.order.capture().then(function(orderData) {
+                // Successful capture! For dev/demo purposes:
+                console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                const transaction = orderData.purchase_units[0].payments.captures[0];
+                alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+                // When ready to go live, remove the alert and show a success message within this page. For example:
+                // const element = document.getElementById('paypal-button-container');
+                // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                // Or go to another URL:  actions.redirect('thank_you.html');
+            });
+        }
+    }).render('#paypal-button-container');
+</script>
+<script src="../script/mode.js"></script>
 </html>

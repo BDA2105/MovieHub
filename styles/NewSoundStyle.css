@@ -1,6 +1,6 @@
 body{
     background-color: black;
-    font-family: Open sans;
+    font-family: "Poppins", sans-serif;
 }
 img{
     width: 100%;
@@ -26,17 +26,17 @@ img{
 }
 h3{
     font-size: 34px;
-    color: white;
+    color: #A499B3;
     margin-bottom: 34px;
-    border-bottom: 4px solid white;
+    border-bottom: 4px solid #757575;;
     padding-bottom: 15px;
 }
 .artist-name{
-    color: #ffffff;
+    color: #A499B3;
     font-size: 15px;
 }
 .song-name{
-    color: #ffffff;
+    color: #A499B3;
     font-size: 16px;
     text-transform: uppercase;
     margin-top: 15px;
@@ -81,3 +81,4 @@ span{
 .aplayer .aplayer-info .aplayer-music{
     margin-bottom: 5px;
 }
+

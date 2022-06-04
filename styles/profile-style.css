@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', Sans-Serif;
+    font-family: 'Poppins', sans-serif;
 }
 .container{
     width: 100%;
@@ -22,13 +22,15 @@ body {
 }
 .profile-box{
     width: 230px;
-    height: 500px;
-    margin-right: 440px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: black;
     text-align: center;
     padding: 40px 90px;
     color: #FFFFFF;
-    position: relative;
     border-radius: 20px;
 }
 .menu-icon{
