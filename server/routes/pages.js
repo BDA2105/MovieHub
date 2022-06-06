@@ -6,68 +6,64 @@ const messages = require('../config/passport')
 //Exports
 module.exports = router;
 
+
+
 //Get homepage
-router.get('/', checkAuthenticated, function (req,res){
-    res.render('index.ejs', {username: req.user.username})
+router.get('/',  function (req,res){
+    res.render('index.ejs', {user: req.user})
 });
 
 //Get anime page
-router.get('/anime', checkAuthenticated, function (req,res){
-    res.render('web_fies/anime.ejs', {username: req.user.username})
+router.get('/anime', function (req,res){
+    res.render('web_fies/anime.ejs', {user: req.user})
 });
 
 //Get cartoons
-router.get('/cartoons', checkAuthenticated,function (req,res){
-    res.render('web_fies/cartoons.ejs', {username: req.user.username})
+router.get('/cartoons',function (req,res){
+    res.render('web_fies/cartoons.ejs', {user: req.user})
 });
 
 //Get drama
-router.get('/drama',checkAuthenticated, function (req,res){
-    res.render('web_fies/drama.ejs', {username: req.user.username})
+router.get('/drama', function (req,res){
+    res.render('web_fies/drama.ejs', {user: req.user})
 });
 
 //Get film
-router.get('/film',checkAuthenticated, function (req,res){
-    res.render('web_fies/film.ejs', {username: req.user.username})
+router.get('/film', function (req,res){
+    res.render('web_fies/film.ejs', {user: req.user})
 });
 
 //Get soundtrack
-router.get('/soundtrack', checkAuthenticated,function (req,res){
-    res.render('web_fies/NewSoundPage.ejs', {username: req.user.username})
+router.get('/soundtrack',function (req,res){
+    res.render('web_fies/NewSoundPage.ejs', {user: req.user})
 });
 
 //Get pay
 router.get('/pay', checkAuthenticated,function (req,res){
-    res.render('web_fies/pay.ejs', {username: req.user.username})
+    res.render('web_fies/pay.ejs', {user: req.user})
 });
 
 //Get pricing table
-router.get('/pricing_table', checkAuthenticated,function (req,res){
-    res.render('web_fies/pricing_table.ejs', {username: req.user.username})
+router.get('/pricing_table',function (req,res){
+    res.render('web_fies/pricing_table.ejs', {user: req.user})
 });
 
 //Get profile
 router.get('/profile', checkAuthenticated,function (req,res){
-    res.render('web_fies/profile.ejs', {name: req.user.name,
-    email: req.user.email,
-    username: req.user.username,
-    })
+    res.render('web_fies/profile.ejs', {user: req.user})
 });
 
 //Get tvshow
-router.get('/tvshow', checkAuthenticated,function (req,res){
-    res.render('web_fies/tvshow.ejs', {username: req.user.username})
+router.get('/tvshow',function (req,res){
+    res.render('web_fies/tvshow.ejs', {user: req.user})
 });
 
 //Get filter
-router.get('/filter', checkAuthenticated,function (req,res){
-    res.render('web_fies/filter.ejs', {username: req.user.username})
+router.get('/filter',function (req,res){
+    res.render('web_fies/filter.ejs', {user: req.user})
 });
 
-//Get posts
-router.get('/posts', checkAuthenticated,function (req,res){
-    res.render('web_fies/posts.ejs', {username: req.user.username})
-});
+
 function checkAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
         return next()

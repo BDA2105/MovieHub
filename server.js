@@ -109,10 +109,11 @@ app.use(passport.session());
 //Set routes
 const users = require('./server/routes/users.js');
 const pages = require('./server/routes/pages.js');
+const comments = require('./server/routes/comments.js');
 
 
 app.use('/users', users);
-
+app.use('/comments', comments);
 app.use('/', pages);
 
 

@@ -1,57 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>MovieHub</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="../style.css" rel="stylesheet">
-    <link href="../styles/catalog.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-</head>
-
-<body>
-<!-- Navbar Start -->
-<div class="container-fluid p-0">
-    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-        <div class="navigation">
-            <input type="checkbox" class="menu-btn" id="menu-btn">
-            <label for="menu-btn" class="menu-icon">
-                <span class="nav-icon"></span>
-            </label>
-
-            <ul class="menu">
-                <li><a href='/'>Home</a></li>
-                <li><a href='/profile'><%= username%></a></li>
-                <li><a href='/filter'>Filter</a></li>
-                <li><a href='/pricing_table'>Premium</a></li>
-                <li><a href='/users/login'>Logout</a></li>
-            </ul>
-        </div>
-
-        <div class="navbar-nav m-auto py-0">
-            <div id="logo">
-                <span>MovieHub</span>
-            </div>
-        </div>
-        <a class="nav-item nav-link ">Hi, <%= username%></a>
-        <a href='/posts' class="nav-item nav-link ">Posts</a>
-        <a href='/' class="nav-item nav-link ">Home</a>
-        <a href='/film' class="nav-item nav-link">Film</a>
-        <a href='tvshow' class="nav-item nav-link">TV-Show</a>
-        <a href='/anime' class="nav-item nav-link">Anime</a>
-        <a href='/cartoons' class="nav-item nav-link">Cartoon</a>
-        <a href='/drama' class="nav-item nav-link">K-Drama</a>
-        <a href='/soundtrack' class="nav-item nav-link">Soundtrack</a>
-        <input type="checkbox" id="mode">
-</nav>
-</div>
+<%- include('header'); -%>
 
 <section class="movie-banner">
     <div class="m-banner-img">
@@ -305,47 +252,7 @@
 
 </section>
 </body>
-<!-- Footer Start -->
-<div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
-    <div class="row pt-5">
-        <div class="col-lg-7 col-md-6">
-            <div class="row">
-                <div class="col-md-6 mb-5">
-                    <div class="col-8">
-                        <div id="title">MovieHUB </div>
-                        <p>Movie & series recommendation service.<br>All rights to the provided movies & series belong to their respective owners.</p>
-                        <div id="buttons">
-                            <a href="https://vk.com" title="Vk group" target="_blank">
-                                <img src="https://img.icons8.com/material/36/ffffff/vk-circled.png" alt="Vk" title="Vkontakte">
-                            </a>
-                            <a href="https://facebook.com" title="Facebook group" target="_blank">
-                                <img src="https://img.icons8.com/material/36/ffffff/facebook-new.png" alt="FB" title="Facebook">
-                            </a>
-                            <a href="https://instagram.com" title="Instagram" target="_blank">
-                                <img src="https://img.icons8.com/material/36/ffffff/instagram-new--v1.png" alt="Inst" title="Instagram">
-                            </a>
-                            <a href="https://twitter.com" title="Twitter" target="_blank">
-                                <img src="https://img.icons8.com/material/36/ffffff/twitter-squared.png" alt="TWT" title="Twitter">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div id="block2">
-                        <div class="col-4">
-                            <div id="Contact us">Contact us</div>
-                            <div id="Contacts info">
-                                <img src="https://img.icons8.com/material/24/ffffff/whatsapp--v1.png" alt="WhatsApp"/> +7 701 735 12 26 <br>
-                                <img src="https://img.icons8.com/material/24/ffffff/sent--v1.png" alt="Telegram"/> @moviehub <br>
-                                <img src="https://img.icons8.com/material/24/ffffff/gmail--v1.png" alt="E-mail"/> moviehub.aitu@gmail.com
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Footer End -->
+<%- include('footer'); -%>
 
 <script src="../script/mode.js"></script>
 

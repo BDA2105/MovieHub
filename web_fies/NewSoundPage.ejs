@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../styles/NewSoundStyle.css"/>
     <link rel="stylesheet" href="/style.css"/>
     <title>MovieHub</title>
-
 </head>
 <body>
 <div class="container-fluid p-0">
@@ -24,11 +23,17 @@
 
             <ul class="menu">
                 <li><a href='/'>Home</a></li>
-                <li><a href='/profile'><%= username%></a></li>
-                <li><a href='/filter'>Filter</a></li>
-                <li><a href='/pricing_table'>Premium</a></li>
-                <li><a href='/users/login'>Logout</a></li>
-
+                <%if (user) {%>
+                    <li><a href='/profile'><%= user.username%></a></li>
+                    <li><a href='/filter'>Filter</a></li>
+                    <li><a href='/pricing_table'>Premium</a></li>
+                    <li><a href='/users/login'>Logout</a></li>
+                <%} else {%>
+                    <li><a href='/users/login'>Login</a></li>
+                    <li><a href='/users/register'>Sign up</a></li>
+                    <li><a href='/filter'>Filter</a></li>
+                    <li><a href='/pricing_table'>Premium</a></li>
+                <%}%>
             </ul>
         </div>
 
@@ -37,8 +42,10 @@
                 <span><a href="#MovieHub">MovieHub</a></span>
             </div>
         </div>
-        <a href="#MovieHub" class="nav-item nav-link ">Hi, <%= username%></a>
-        <a href='/posts' class="nav-item nav-link ">Posts</a>
+        <%if (user) {%>
+            <a href="#MovieHub" class="nav-item nav-link ">Hi, <%= user.username%></a>
+            <a href='/posts' class="nav-item nav-link ">Posts</a>
+        <%}%>
         <a href='/' class="nav-item nav-link ">Home</a>
         <a href='/film' class="nav-item nav-link">Film</a>
         <a href='tvshow' class="nav-item nav-link">TV-Show</a>

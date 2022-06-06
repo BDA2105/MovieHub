@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MovieHub</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../style.css" rel="stylesheet">
+    <link href="../styles/catalog.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+</head>
+
+<body>
+<!-- Navbar Start -->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <div class="navigation">
+            <input type="checkbox" class="menu-btn" id="menu-btn">
+            <label for="menu-btn" class="menu-icon">
+                <span class="nav-icon"></span>
+            </label>
+
+            <ul class="menu">
+                <li><a href='/'>Home</a></li>
+                <%if (user) {%>
+                    <li><a href='/profile'><%= user.username%></a></li>
+                    <li><a href='/filter'>Filter</a></li>
+                    <li><a href='/pricing_table'>Premium</a></li>
+                    <li><a href='/users/logout'>Logout</a></li>
+                <%} else {%>
+                    <li><a href='/users/login'>Login</a></li>
+                    <li><a href='/users/register'>Sign up</a></li>
+                    <li><a href='/filter'>Filter</a></li>
+                    <li><a href='/pricing_table'>Premium</a></li>
+                <%}%>
+            </ul>
+        </div>
+
+        <div class="navbar-nav m-auto py-0">
+            <div id="logo">
+                <span>MovieHub</span>
+            </div>
+        </div>
+        <%if (user) {%>
+            <a class="nav-item nav-link">Hi, <%= user.username%></a>
+            <a href='/comments/posts' class="nav-item nav-link ">Posts</a>
+        <%}%>
+        <a href='/' class="nav-item nav-link ">Home</a>
+        <a href='/film' class="nav-item nav-link">Film</a>
+        <a href='tvshow' class="nav-item nav-link">TV-Show</a>
+        <a href='/anime' class="nav-item nav-link">Anime</a>
+        <a href='/cartoons' class="nav-item nav-link">Cartoon</a>
+        <a href='/drama' class="nav-item nav-link">K-Drama</a>
+        <a href='/soundtrack' class="nav-item nav-link">Soundtrack</a>
+        <input type="checkbox" id="mode">
+    </nav>
+</div>
+<!-- Navbar End -->

@@ -21,41 +21,7 @@
 
 
 <body>
-<!-- Navbar Start -->
-<div class="container-fluid p-0">
-    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-        <div class="navigation">
-            <input type="checkbox" class="menu-btn" id="menu-btn">
-            <label for="menu-btn" class="menu-icon">
-                <span class="nav-icon"></span>
-            </label>
-
-            <ul class="menu">
-                <li><a href='/'>Home</a></li>
-                <li><a href='/profile'><%= username%></a></li>
-                <li><a href='/filter'>Filter</a></li>
-                <li><a href='/pricing_table'>Premium</a></li>
-                <li><a href='/users/login'>Logout</a></li>
-            </ul>
-        </div>
-
-        <div class="navbar-nav m-auto py-0">
-            <div id="logo">
-                <span>MovieHub</span>
-            </div>
-        </div>
-        <a class="nav-item nav-link ">Hi, <%= username%></a>
-        <a href='/posts' class="nav-item nav-link ">Posts</a>
-        <a href='/' class="nav-item nav-link ">Home</a>
-        <a href='/film' class="nav-item nav-link">Film</a>
-        <a href='tvshow' class="nav-item nav-link">TV-Show</a>
-        <a href='/anime' class="nav-item nav-link">Anime</a>
-        <a href='/cartoons' class="nav-item nav-link">Cartoon</a>
-        <a href='/drama' class="nav-item nav-link">K-Drama</a>
-        <a href='/soundtrack' class="nav-item nav-link">Soundtrack</a>
-        <input type="checkbox" id="mode">
-</nav>
-</div>
+<%- include('header'); -%>
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
@@ -67,18 +33,23 @@
         </div>
 
         <div class="col-lg-6">
-            <form>
+            <form method="post" action="/comments/posts">
                 <div class="form-group">
-                    <label for="comment-name">Name:</label>
-                    <input type="name" class="form-control" id="comment-name" placeholder="Your name">
+                    <label>Username</label>
+                    <input type="text" name="username" class="form-control" placeholder="username">
                 </div>
+
                 <div class="form-group">
-                    <label for="comment-body">Comment:</label>
-                    <input type="name" class="form-control" id="comment-body" placeholder="Your comment">
+                    <label>Film</label>
+                    <input type="text" name="film" class="form-control" placeholder="film">
                 </div>
-                <div class="form-group text-right">
-                    <button type="submit" id="comment-add" class="btn btn-primary">Add comment</button>
+
+                <div class="form-group">
+                    <label>Your comment:</label>
+                    <input type="text" name="text" class="form-control" placeholder="text">
                 </div>
+
+                <button type="submit" class="btn btn-default">Sign Up</button>
             </form>
         </div>
     </div>
@@ -89,51 +60,12 @@
         margin-bottom: 20px;
     }
 </style>
-<div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
-    <div class="row pt-5">
-        <div class="col-lg-7 col-md-6">
-            <div class="row">
-                <div class="col-md-6 mb-5">
-                    <div class="col-8">
-                        <div id="title">MovieHUB </div>
-                        <p>Movie & series recommendation service.<br>All rights to the provided movies & series belong to their respective owners.</p>
-                        <div id="buttons">
-                            <a href="https://vk.com" title="Vk group" target="_blank">
-                                <img src="https://img.icons8.com/material/36/ffffff/vk-circled.png" alt="Vk" title="Vkontakte">
-                            </a>
-                            <a href="https://facebook.com" title="Facebook group" target="_blank">
-                                <img src="https://img.icons8.com/material/36/ffffff/facebook-new.png" alt="FB" title="Facebook">
-                            </a>
-                            <a href="https://instagram.com" title="Instagram" target="_blank">
-                                <img src="https://img.icons8.com/material/36/ffffff/instagram-new--v1.png" alt="Inst" title="Instagram">
-                            </a>
-                            <a href="https://twitter.com" title="Twitter" target="_blank">
-                                <img src="https://img.icons8.com/material/36/ffffff/twitter-squared.png" alt="TWT" title="Twitter">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div id="block2">
-                        <div class="col-4">
-                            <div id="Contact us">Contact us</div>
-                            <div id="Contacts info">
-                                <img src="https://img.icons8.com/material/24/ffffff/whatsapp--v1.png" alt="WhatsApp"/> +7 701 735 12 26 <br>
-                                <img src="https://img.icons8.com/material/24/ffffff/sent--v1.png" alt="Telegram"/> @moviehub <br>
-                                <img src="https://img.icons8.com/material/24/ffffff/gmail--v1.png" alt="E-mail"/> moviehub.aitu@gmail.com
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
+<%- include('footer'); -%>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-<script src="../script/commentfield.js"></script>
 <script src="../script/mode.js"></script>
 
 </html>

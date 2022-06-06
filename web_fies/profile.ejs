@@ -8,13 +8,13 @@
 <body>
 <div class="container">
     <div class="profile-box">
-        <h1><%= username%></h1>
-        <h4>Email: <%= email%></h4>
-        <h4>Name: <%= name%></h4>
+        <h1><%= user.username%></h1>
+        <h4>Email: <%= user.email%></h4>
+        <h4>Name: <%= user.name%></h4>
         <ul>
             <li><a href='/'>Home</a></li>
             <li><a href='/filter'>Catalog</a></li>
-            <li><a href='/users/login'>Log Out</a></li>
+            <li><a href='/users/logout'>Log Out</a></li>
         </ul>
     </div>
 </div>
