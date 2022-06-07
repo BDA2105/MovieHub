@@ -37,14 +37,13 @@
         </div>
 
         <div class="col-lg-6">
+            <%for(let i = 0; i < comments.length; i++) {%>
             <div id="comment-field">
-                <%for(let i = 0; i < comments.length; i++) {%>
-                <p id="time" class="alert alert-primary"><%=timeConverter(comments[i].time)%></p>
-                <p class="alert alert-primary"><%=comments[i].username%></p>
-                <p class="alert alert-primary"><%=comments[i].film%></p>
+                <p class="text-right small"><em><%=timeConverter(comments[i].time)%></em></p>
+                <p class="alert alert-primary"><%=comments[i].username%> about <%=comments[i].film%></p>
                 <p class="alert alert-success"><%=comments[i].text%></p>
-                <% } %>
             </div>
+            <% } %>
         </div>
 
         <div class="col-lg-6">

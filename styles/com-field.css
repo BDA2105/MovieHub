@@ -9,7 +9,11 @@
 }
 #comment-field{
     margin-right: 500px;
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 10px 10px;
+    border-bottom: 1px solid rgba(16, 46, 46, 1);
+    border-radius: 12px;
 }
 .form-group{
     color: #ef233c;
