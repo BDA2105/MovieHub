@@ -7,7 +7,7 @@ const expressValidator = require('express-validator')
 const passport = require('passport');
 const flash = require('express-flash')
 const session = require('express-session');
-
+require('dotenv').config({path: '.env'});
 
 //Init app
 const app = express();
@@ -118,10 +118,10 @@ app.use('/', pages);
 
 
 //Start the server
-let port = process.env.PORT;
+let port = process.env.PORT || 8000;
 
 if (port == null || port == "") {
-    port = 9000;
+    port = 8000;
 }
 app.listen(port, function (){
     console.log('Server started on port ' + port)
