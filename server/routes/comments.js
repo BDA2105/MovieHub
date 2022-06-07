@@ -9,7 +9,15 @@ let errors;
 
 //Get posts
 router.get('/posts', checkAuthenticated,function (req,res){
-    res.render('web_fies/posts.ejs', {user: req.user})
+    Comment.find(function (err,comments){
+        if(err)
+            console.log(err);
+
+        res.render('web_fies/posts.ejs', {
+            user: req.user,
+            comments: comments,
+        })
+    })
 });
 
 /*
@@ -20,7 +28,7 @@ router.post('/posts', function (req, res) {
     let username = req.body.username;
     let film = req.body.film;
     let text = req.body.text;
-    let time = Date.now();
+    let time = Date();
 
     req.checkBody('username', 'Username is required!').notEmpty();
     req.checkBody('film', 'Film\'s name is required!').notEmpty();
@@ -29,10 +37,18 @@ router.post('/posts', function (req, res) {
     errors = req.validationErrors();
 
     if (errors) {
-        res.render('web_fies/posts.ejs', {
-            errors: errors,
-            comment: null,
-        });
+
+        Comment.find(function (err,comments){
+            if(err)
+                console.log(err);
+
+            res.render('web_fies/posts.ejs', {
+                errors: errors,
+                comment: null,
+                user: req.user,
+                comments: comments,
+            })
+        })
     } else {
         let comment = new Comment({
             username: username,

@@ -1,45 +1,26 @@
-let comments = [];
+let posts;
+
 loadComments();
 
-document.getElementById('comment-add')["onclick"] = () => {
-    event.preventDefault();
-    let commentName = document.getElementById('comment-name');
-    let commentBody = document.getElementById('comment-body');
-
-    let comment = {
-        name : commentName.value,
-        body : commentBody.value,
-        time : Math.floor(Date.now()/1000)
-    }
-    commentName.value = '';
-    commentBody.value = '';
-    comments.push(comment);
-    saveComments();
-    showComments();
-}
-
-function saveComments(){
-    localStorage.setItem('comments', JSON.stringify(comments));
-}
-
 function loadComments(){
-    if (localStorage.getItem('comments')) comments = JSON.parse(localStorage.getItem('comments'));
+    posts = JSON.parse(JSON.stringify(comments));
     showComments();
 }
 
 function showComments(){
     let commentField = document.getElementById('comment-field');
     let out = '';
-    comments.forEach(function (item){
+    posts.forEach(function (item){
         out +=`<p class="text-right small"><em>${timeConverter(item.time)}</em></p>`;
-        out +=`<p class="alert alert-primary">${item.name}</p>`;
-        out +=`<p class="alert alert-success">${item.body}</p>`;
+        out +=`<p class="alert alert-primary">${item.username}</p>`;
+        out +=`<p class="alert alert-primary">${item.film}</p>`;
+        out +=`<p class="alert alert-success">${item.text}</p>`;
     });
     commentField.innerHTML = out;
 }
 
 function timeConverter(UNIX_timestamp){
-    let a = new Date(UNIX_timestamp * 1000);
+    let a = new Date(UNIX_timestamp);
     let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     let year = a.getFullYear();
     let month = months[a.getMonth()];
