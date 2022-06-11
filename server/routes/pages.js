@@ -48,6 +48,21 @@ router.get('/pricing_table',function (req,res){
     res.render('web_fies/pricing_table.ejs', {user: req.user})
 });
 
+//Get pricing table for unauthorized
+router.get('/pricing_table-un',function (req,res){
+    res.render('web_fies/pricing_table-unauth.ejs', {user: req.user})
+});
+
+//Get payment cancel
+router.get('/cancel',function (req,res){
+    res.render('web_fies/cancel.ejs', {user: req.user})
+});
+
+//Get payment sucksess
+router.get('/success',function (req,res){
+    res.render('web_fies/success.ejs', {user: req.user})
+});
+
 //Get profile
 router.get('/profile', checkAuthenticated,function (req,res){
     res.render('web_fies/profile.ejs', {user: req.user})

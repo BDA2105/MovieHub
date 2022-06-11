@@ -54,6 +54,7 @@ router.post('/register', function (req, res) {
                     email: email,
                     username: username,
                     password: password,
+                    isSubscribed: 0,
                     admin: 0
                 });
 

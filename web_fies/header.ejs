@@ -37,7 +37,7 @@
                     <li><a href='/users/login'>Login</a></li>
                     <li><a href='/users/register'>Sign up</a></li>
                     <li><a href='/filter'>Filter</a></li>
-                    <li><a href='/pricing_table'>Premium</a></li>
+                    <li><a href='/pricing_table-un'>Premium</a></li>
                 <%}%>
             </ul>
         </div>
@@ -48,8 +48,11 @@
             </div>
         </div>
         <%if (user) {%>
-            <%if (user.admin = 1){%>
+            <%if (user.admin === 1){%>
             <a href='/admin' class="nav-item nav-link">Admin Panel</a>
+            <%}%>
+            <%if (user.admin === 0) {%>
+            <a class="nav-item nav-link">Hi, <%=user.username%></a>
             <%}%>
             <a href='/comments/posts' class="nav-item nav-link ">Posts</a>
         <%}%>

@@ -4,6 +4,13 @@
     <td><%= users[i].username %></td>
     <td><%= users[i].email %></td>
     <td><%= users[i].name %></td>
+    <td><%if (users[i].isSubscribed === 1){%>
+            Yes
+        <%}%>
+        <%if (users[i].isSubscribed === 0){%>
+            No
+        <%}%>
+    </td>
     <td>
 
         <a class="btn border-shadow delete" data-id=<%= users[i]._id%> >
