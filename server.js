@@ -7,10 +7,14 @@ const expressValidator = require('express-validator')
 const passport = require('passport');
 const flash = require('express-flash')
 const session = require('express-session');
-require('dotenv').config({path: '.env'});
+const morgan = require('morgan');
+require('dotenv').config({path: 'config.env'});
 
 //Init app
 const app = express();
+
+// log requests
+app.use(morgan('tiny'));
 
 //Connect to DB
 mongoose.connect(server.database);
@@ -33,7 +37,7 @@ app.use(express.static(path.join(__dirname, '')));
 app.locals.errors = null;
 
 //Body Parser Middleware
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 // Get user Model
@@ -107,20 +111,28 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //Set routes
+const admin = require('./admin/server/routes/router')
 const users = require('./server/routes/users.js');
 const pages = require('./server/routes/pages.js');
 const comments = require('./server/routes/comments.js');
 
-
+app.use('/admin', admin)
 app.use('/users', users);
 app.use('/comments', comments);
 app.use('/', pages);
+
+// load assets || adding to the server
+app.use('/css', express.static(path.resolve(__dirname, "assets/css")))
+app.use('/img', express.static(path.resolve(__dirname, "assets/img")))
+app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
+
+// load routers
 
 
 //Start the server
 let port = process.env.PORT || 8000;
 
-if (port == null || port == "") {
+if (port == null || port === "") {
     port = 8000;
 }
 app.listen(port, function (){

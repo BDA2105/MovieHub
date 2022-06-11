@@ -48,7 +48,9 @@
             </div>
         </div>
         <%if (user) {%>
-            <a class="nav-item nav-link">Hi, <%= user.username%></a>
+            <%if (user.admin = 1){%>
+            <a href='/admin' class="nav-item nav-link">Admin Panel</a>
+            <%}%>
             <a href='/comments/posts' class="nav-item nav-link ">Posts</a>
         <%}%>
         <a href='/' class="nav-item nav-link ">Home</a>
