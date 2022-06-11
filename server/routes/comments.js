@@ -25,12 +25,11 @@ router.get('/posts', checkAuthenticated,function (req,res){
  */
 router.post('/posts', function (req, res) {
 
-    let username = req.body.username;
+    let username = req.user.username;
     let film = req.body.film;
     let text = req.body.text;
     let time = Date();
 
-    req.checkBody('username', 'Username is required!').notEmpty();
     req.checkBody('film', 'Film\'s name is required!').notEmpty();
     req.checkBody('text', 'Post should contain a comment!').notEmpty();
 
