@@ -38,7 +38,17 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5 pb-4 pb-lg-0">
-                <a href="https://youtu.be/1jkw2JPCl18"><img class="img-fluid w-100" src="/images/DCLeagueOfPets.jpg" alt=""></a>
+                <%if (!user){%>
+                    <a href=/pricing_table-un><img class="img-fluid w-100" src="/images/DCLeagueOfPets.jpg" alt=""></a>
+                <%}%>
+                <%if (user){%>
+                    <%if (user.isSubscribed === 0){%>
+                        <a href=/pricing_table><img class="img-fluid w-100" src="/images/DCLeagueOfPets.jpg" alt=""></a>
+                    <%}%>
+                    <%if (user.isSubscribed === 1){%>
+                    <a href="https://youtu.be/1jkw2JPCl18"><img class="img-fluid w-100" src="/images/DCLeagueOfPets.jpg" alt=""></a>
+                    <%}%>
+                <%}%>
             </div>
             <div class="col-lg-7">
                 <h6 class="text-primary text-uppercase font-weight-bold">Premier 2022</h6>
