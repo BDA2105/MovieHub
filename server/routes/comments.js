@@ -8,7 +8,7 @@ const Comment = require ('../models/comment.js')
 let errors;
 
 //Get posts
-router.get('/posts', checkAuthenticated,function (req,res){
+router.get('/posts',function (req,res){
     Comment.find(function (err,comments){
         if(err)
             console.log(err);
@@ -71,10 +71,3 @@ router.post('/posts', function (req, res) {
 // Exports
 module.exports = router;
 
-function checkAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) {
-        return next()
-    }
-    else
-        res.redirect('/users/login')
-}
