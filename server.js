@@ -111,13 +111,15 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //Set routes
-const admin = require('./admin/server/routes/router')
+const admin = require('./admin/server/routes/router');
 const users = require('./server/routes/users.js');
+const subscription = require('./server/routes/subscription.js');
 const pages = require('./server/routes/pages.js');
 const comments = require('./server/routes/comments.js');
 
-app.use('/admin', admin)
+app.use('/admin', admin);
 app.use('/users', users);
+app.use('/subscription', subscription);
 app.use('/comments', comments);
 app.use('/', pages);
 
