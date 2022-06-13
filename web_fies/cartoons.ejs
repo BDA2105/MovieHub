@@ -23,8 +23,17 @@
                     <strong>Category</strong><br/>
                     <a href="#">Adventure</a>,<a href="#">Animation</a>,<a href="#">Comedy</a>
                 </div>
-
-                <a href="https://youtu.be/Ua-b6CDFU-A" class="watch-btn">Watch Trailer</a>
+                <%if (!user){%>
+                    <a href=/pricing_table-un class="watch-btn">Watch Trailer</a>
+                <%}%>
+                <%if (user){%>
+                <%if (user.isSubscribed === 0){%>
+                    <a href=/pricing_table class="watch-btn">Watch Trailer</a>
+                <%}%>
+                <%if (user.isSubscribed === 1){%>
+                    <a href="https://youtu.be/Ua-b6CDFU-A" class="watch-btn">Watch Trailer</a>
+                <%}%>
+                <%}%>
             </div>
         </div>
     </div>
@@ -62,7 +71,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2021</span>
-                        <a href="https://youtu.be/1VIZ89FEjYI">Raya And The Last Dragon</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Raya And The Last Dragon</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Raya And The Last Dragon</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/1VIZ89FEjYI">Raya And The Last Dragon</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -78,7 +97,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2020</span>
-                        <a href="https://youtu.be/CaimKeDcudo">Encanto</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Encanto</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Encanto</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/CaimKeDcudo">Encanto</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -94,7 +123,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2021</span>
-                        <a href="https://youtu.be/EPZu5MA2uqI">Sing 2</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Sing 2</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Sing 2</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/EPZu5MA2uqI">Sing 2</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -110,7 +149,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2015</span>
-                        <a href="https://youtu.be/yRUAzGQ3nSY">Inside Out</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Inside Out</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Inside Out</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/yRUAzGQ3nSY">Inside Out</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -126,7 +175,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2021</span>
-                        <a href="https://youtu.be/dDNhtB7L8Lk">Back To The Outback</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Back To The Outback</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Back To The Outback</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/dDNhtB7L8Lk">Back To The Outback</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -142,7 +201,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2021</span>
-                        <a href="https://youtu.be/BOe8L69JpVI">Vivo</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Vivo</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Vivo</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/BOe8L69JpVI">Vivo</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -158,7 +227,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2018</span>
-                        <a href="https://youtu.be/i5qOzqD9Rms">The Incredibles 2</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>The Incredibles 2</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>The Incredibles 2</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/i5qOzqD9Rms">The Incredibles 2</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -174,7 +253,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>1994</span>
-                        <a href="https://youtu.be/lFzVJEksoDY">The Lion King</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>The Lion King</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>The Lion King</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/lFzVJEksoDY">The Lion King</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -190,7 +279,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2009</span>
-                        <a href="https://youtu.be/ORFWdXl_zJ4">Up</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Up</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Up</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/ORFWdXl_zJ4">Up</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -207,7 +306,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2012</span>
-                        <a href="https://youtu.be/hzixp8s4pyg">Ice Age 4</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Ice Age 4</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Ice Age 4</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/hzixp8s4pyg">Ice Age 4</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -224,7 +333,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2008</span>
-                        <a href="https://youtu.be/CZ1CATNbXg0">WALL-E</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>WALL-E</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>WALL-E</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/CZ1CATNbXg0">WALL-E</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -241,7 +360,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2012</span>
-                        <a href="https://youtu.be/TEHWDA_6e3M">Brave</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Brave</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Brave</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/TEHWDA_6e3M">Brave</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>

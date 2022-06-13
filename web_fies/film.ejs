@@ -23,8 +23,17 @@
                     <strong>Category</strong><br/>
                     <a href="#">Fantasy,</a>,<a href="#"> Action,</a>,<a href="#">Romance,</a>,<a href="#">Adventure</a>
                 </div>
-
-                <a href="https://youtu.be/tgB1wUcmbbw" class="watch-btn">Watch Trailer</a>
+                <%if (!user){%>
+                    <a href=/pricing_table-un class="watch-btn">Watch Trailer</a>
+                <%}%>
+                <%if (user){%>
+                <%if (user.isSubscribed === 0){%>
+                    <a href=/pricing_table class="watch-btn">Watch Trailer</a>
+                <%}%>
+                <%if (user.isSubscribed === 1){%>
+                    <a href="https://youtu.be/tgB1wUcmbbw" class="watch-btn">Watch Trailer</a>
+                <%}%>
+                <%}%>
             </div>
         </div>
     </div>
@@ -78,7 +87,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2016</span>
-                        <a href="https://youtu.be/0pdqf4P9MB8">La La Land</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>La La Land</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>La La Land</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/0pdqf4P9MB8">La La Land</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -94,7 +113,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2020</span>
-                        <a href="https://youtu.be/AZGcmvrTX9M">Tenet</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Tenet</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Tenet</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/AZGcmvrTX9M">Tenet</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -110,7 +139,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>1994</span>
-                        <a href="https://youtu.be/tGpTpVyI_OQ">Pulp Fiction</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Pulp Fiction</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Pulp Fiction</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/tGpTpVyI_OQ">Pulp Fiction</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -126,7 +165,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>1999</span>
-                        <a href="https://youtu.be/BdJKm16Co6M">Fight Club</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Fight Club</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Fight Club</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/BdJKm16Co6M">Fight Club</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -142,7 +191,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2016</span>
-                        <a href="https://youtu.be/3UnSXelOJo0">Demolition</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Demolition</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Demolition</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/3UnSXelOJo0">Demolition</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -158,7 +217,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2003</span>
-                        <a href="https://youtu.be/c_dNIXwrbzY">Kill Bill: Vol. 1</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Kill Bill: Vol. 1</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Kill Bill: Vol. 1</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/c_dNIXwrbzY">Kill Bill: Vol. 1</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -174,7 +243,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>1994</span>
-                        <a href="https://youtu.be/Mj9IA9tTfio">Forrest Gump</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Forrest Gump</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Forrest Gump</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/Mj9IA9tTfio">Forrest Gump</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -190,7 +269,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2016</span>
-                        <a href="https://youtu.be/7W1m5ER3I1Y">Arrival</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Arrival</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Arrival</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/7W1m5ER3I1Y">Arrival</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -207,7 +296,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2016</span>
-                        <a href="https://youtu.be/s2-1hz1juBI">Hacksaw Ridge</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Hacksaw Ridge</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Hacksaw Ridge</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/s2-1hz1juBI">Hacksaw Ridge</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -224,7 +323,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>1989</span>
-                        <a href="https://youtu.be/ye4KFyWu2do">Dead Poets Society</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Dead Poets Society</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Dead Poets Society</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/ye4KFyWu2do">Dead Poets Society</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -241,7 +350,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2007</span>
-                        <a href="https://youtu.be/4eaZ_48ZYog">Superbad</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Superbad</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Superbad</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/4eaZ_48ZYog">Superbad</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>

@@ -23,8 +23,17 @@
                     <strong>Category</strong><br/>
                     <a href="#">Horror</a>,<a href="#">Fantasy</a>,<a href="#">Action</a>,<a href="#">Drama</a>
                 </div>
-
-                <a href="https://youtu.be/VBXqrBl6pEo" class="watch-btn">Watch Trailer</a>
+                <%if (!user){%>
+                    <a href=/pricing_table-un class="watch-btn">Watch Trailer</a>
+                <%}%>
+                <%if (user){%>
+                <%if (user.isSubscribed === 0){%>
+                    <a href=/pricing_table class="watch-btn">Watch Trailer</a>
+                <%}%>
+                <%if (user.isSubscribed === 1){%>
+                    <a href="https://youtu.be/VBXqrBl6pEo" class="watch-btn">Watch Trailer</a>
+                <%}%>
+                <%}%>
             </div>
         </div>
     </div>
@@ -62,7 +71,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2005-2020</span>
-                        <a href="https://www.youtube.com/watch?v=t-775JyzDTk">Supernatural</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Supernatural</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Supernatural</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://www.youtube.com/watch?v=t-775JyzDTk">Supernatural</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -78,7 +97,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2020</span>
-                        <a href="https://www.youtube.com/watch?v=7H9AaiBLHCo">Ragnarok</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Ragnarok</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Ragnarok</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://www.youtube.com/watch?v=7H9AaiBLHCo">Ragnarok</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -94,7 +123,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2011-2021</span>
-                        <a href="https://www.youtube.com/watch?v=9tvkYS5cA58">Shameless</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Shameless</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Shameless</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://www.youtube.com/watch?v=9tvkYS5cA58">Shameless</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -110,7 +149,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2010-2017</span>
-                        <a href="https://www.youtube.com/watch?v=xK7S9mrFWL4">Sherlock</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Sherlock</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Sherlock</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://www.youtube.com/watch?v=xK7S9mrFWL4">Sherlock</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -126,7 +175,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2017-2020</span>
-                        <a href="https://youtu.be/BZ5OCIJVErw">Dark</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Dark</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Dark</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/BZ5OCIJVErw">Dark</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -142,7 +201,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2019</span>
-                        <a href="https://youtu.be/cajLoaFl2Zo">Euphoria</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Euphoria</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Euphoria</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/cajLoaFl2Zo">Euphoria</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -158,7 +227,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2011-2019</span>
-                        <a href="https://youtu.be/KPLWWIOCOOQ">Game of Thrones</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Game of Thrones</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Game of Thrones</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/KPLWWIOCOOQ">Game of Thrones</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -174,7 +253,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2022</span>
-                        <a href="https://youtu.be/dutsjEpqkXs">The Responder</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>The Responder</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>The Responder</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/dutsjEpqkXs">The Responder</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -190,7 +279,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2022</span>
-                        <a href="https://youtu.be/f2OGhJoypPw">Reframed:Marilyn Monrioe</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Reframed:Marilyn Monrioe</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Reframed:Marilyn Monrioe</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/f2OGhJoypPw">Reframed:Marilyn Monrioe</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -207,7 +306,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2014</span>
-                        <a href="https://youtu.be/drQWopZDEEY">The Flash</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>The Flash</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>The Flash</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/drQWopZDEEY">The Flash</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -224,7 +333,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2014-2019</span>
-                        <a href="https://youtu.be/Vm4tx1O9GAc">Silicon Valley</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Silicon Valley</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Silicon Valley</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/Vm4tx1O9GAc">Silicon Valley</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -241,7 +360,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2014-2019</span>
-                        <a href="https://youtu.be/LpYpn2Bx2Ug">Gotham</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Gotham</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Gotham</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/LpYpn2Bx2Ug">Gotham</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>

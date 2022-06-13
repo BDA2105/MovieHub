@@ -23,8 +23,17 @@
                     <strong>Category</strong><br/>
                     <a href="#">Romance</a>,<a href="#">Comedy</a>
                 </div>
-
-                <a href="https://youtu.be/8FNwMvTZqvY" class="watch-btn">Watch Trailer</a>
+                <%if (!user){%>
+                    <a href=/pricing_table-un class="watch-btn">Watch Trailer</a>
+                <%}%>
+                <%if (user){%>
+                <%if (user.isSubscribed === 0){%>
+                    <a href=/pricing_table class="watch-btn">Watch Trailer</a>
+                <%}%>
+                <%if (user.isSubscribed === 1){%>
+                    <a href="https://youtu.be/8FNwMvTZqvY" class="watch-btn">Watch Trailer</a>
+                <%}%>
+                <%}%>
             </div>
         </div>
     </div>
@@ -62,7 +71,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2018</span>
-                        <a href="https://youtu.be/E1O158mb5NM">My Mister</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>My Mister</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>My Mister</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/E1O158mb5NM">My Mister</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -78,7 +97,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2021</span>
-                        <a href="https://youtu.be/IR9cIGXbYLk">Law School</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Law School</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Law School</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/IR9cIGXbYLk">Law School</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -94,7 +123,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2019</span>
-                        <a href="https://youtu.be/jLrWXxEAgXk">Class of Lies</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Class of Lies</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Class of Lies</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/jLrWXxEAgXk">Class of Lies</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -110,7 +149,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2021</span>
-                        <a href="https://youtu.be/S12-4mXCNj4">Vincenzo</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Vincenzo</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Vincenzo</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/S12-4mXCNj4">Vincenzo</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -126,7 +175,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2021</span>
-                        <a href="https://youtu.be/Z2kJpmgz4jc">Shadow Beauty</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Shadow Beauty</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Shadow Beauty</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/Z2kJpmgz4jc">Shadow Beauty</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -142,7 +201,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2022</span>
-                        <a href="https://youtu.be/zhmxDgBxGRk">Tomorrow</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Tomorrow</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Tomorrow</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/zhmxDgBxGRk">Tomorrow</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -158,7 +227,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2021</span>
-                        <a href="https://youtu.be/g0Oj4A2rslY">Love Alarm 2</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Love Alarm 2</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Love Alarm 2</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/g0Oj4A2rslY">Love Alarm 2</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -174,7 +253,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2021</span>
-                        <a href="https://youtu.be/xJCTxUuu3js">Nevertheless</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Nevertheless</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Nevertheless</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/xJCTxUuu3js">Nevertheless</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -190,7 +279,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2019</span>
-                        <a href="https://youtu.be/XyBXbYYSFiw">Tempted</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Tempted</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Tempted</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/XyBXbYYSFiw">Tempted</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -207,7 +306,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2020</span>
-                        <a href="https://youtu.be/twdNrhOhshs">XX</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>XX</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>XX</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/twdNrhOhshs">XX</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -224,7 +333,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2015</span>
-                        <a href="https://youtu.be/QGzhWpD2gZw">School 2015</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>School 2015</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>School 2015</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/QGzhWpD2gZw">School 2015</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -241,7 +360,17 @@
                 <div class="bottom-text">
                     <div class="movie-name">
                         <span>2020</span>
-                        <a href="https://youtu.be/NeaHNQJ1kCo">Itaewon Class</a>
+                        <%if (!user){%>
+                            <a href=/pricing_table-un>Itaewon Class</a>
+                        <%}%>
+                        <%if (user){%>
+                        <%if (user.isSubscribed === 0){%>
+                            <a href=/pricing_table>Itaewon Class</a>
+                        <%}%>
+                        <%if (user.isSubscribed === 1){%>
+                            <a href="https://youtu.be/NeaHNQJ1kCo">Itaewon Class</a>
+                        <%}%>
+                        <%}%>
                     </div>
                 </div>
             </div>

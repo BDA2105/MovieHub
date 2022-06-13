@@ -25,11 +25,11 @@
         </div>
 
         <%if (!user){%>
-          <a href=/pricing_table-un>Watch Trailer</a>
+          <a href=/pricing_table-un class="watch-btn">Watch Trailer</a>
         <%}%>
         <%if (user){%>
         <%if (user.isSubscribed === 0){%>
-          <a href=/pricing_table>Watch Trailer</a>
+          <a href=/pricing_table class="watch-btn">Watch Trailer</a>
         <%}%>
         <%if (user.isSubscribed === 1){%>
           <a href="https://youtu.be/eyonP1AgC0k" class="watch-btn">Watch Trailer</a>
