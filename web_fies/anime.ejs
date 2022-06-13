@@ -24,7 +24,17 @@
           <a href="#">Action,</a>,<a href="#">Fantasy,</a>,<a href="#">Horror</a>
         </div>
 
-        <a href="https://youtu.be/eyonP1AgC0k" class="watch-btn">Watch Trailer</a>
+        <%if (!user){%>
+          <a href=/pricing_table-un>Watch Trailer</a>
+        <%}%>
+        <%if (user){%>
+        <%if (user.isSubscribed === 0){%>
+          <a href=/pricing_table>Watch Trailer</a>
+        <%}%>
+        <%if (user.isSubscribed === 1){%>
+          <a href="https://youtu.be/eyonP1AgC0k" class="watch-btn">Watch Trailer</a>
+        <%}%>
+        <%}%>
       </div>
     </div>
   </div>
@@ -62,7 +72,17 @@
         <div class="bottom-text">
           <div class="movie-name">
             <span>2013-Current</span>
-            <a href="https://youtu.be/MGRm4IzK1SQ">Attack on Titan</a>
+            <%if (!user){%>
+              <a href=/pricing_table-un>Attack on Titan</a>
+            <%}%>
+            <%if (user){%>
+            <%if (user.isSubscribed === 0){%>
+              <a href=/pricing_table>Attack on Titan</a>
+            <%}%>
+            <%if (user.isSubscribed === 1){%>
+              <a href="https://youtu.be/MGRm4IzK1SQ">Attack on Titan</a>
+            <%}%>
+            <%}%>
           </div>
         </div>
       </div>
@@ -78,7 +98,17 @@
         <div class="bottom-text">
           <div class="movie-name">
             <span>2006-2007</span>
-            <a href="https://youtu.be/NlJZ-YgAt-c">Death Note</a>
+            <%if (!user){%>
+              <a href=/pricing_table-un>Death Note</a>
+            <%}%>
+            <%if (user){%>
+            <%if (user.isSubscribed === 0){%>
+              <a href=/pricing_table>Death Note</a>
+            <%}%>
+            <%if (user.isSubscribed === 1){%>
+              <a href="https://youtu.be/NlJZ-YgAt-c">Death Note</a>
+            <%}%>
+            <%}%>
           </div>
         </div>
       </div>
@@ -94,7 +124,17 @@
         <div class="bottom-text">
           <div class="movie-name">
             <span>2016</span>
-            <a href="https://youtu.be/xU47nhruN-Q">Your Name</a>
+            <%if (!user){%>
+              <a href=/pricing_table-un>Your Name</a>
+            <%}%>
+            <%if (user){%>
+            <%if (user.isSubscribed === 0){%>
+              <a href=/pricing_table>Your Name</a>
+            <%}%>
+            <%if (user.isSubscribed === 1){%>
+              <a href="https://youtu.be/xU47nhruN-Q">Your Name</a>
+            <%}%>
+            <%}%>
           </div>
         </div>
       </div>
@@ -110,7 +150,17 @@
         <div class="bottom-text">
           <div class="movie-name">
             <span>2002-2007</span>
-            <a href="https://youtu.be/-G9BqkgZXRA">Naruto</a>
+            <%if (!user){%>
+              <a href=/pricing_table-un>Naruto</a>
+            <%}%>
+            <%if (user){%>
+            <%if (user.isSubscribed === 0){%>
+              <a href=/pricing_table>Naruto</a>
+            <%}%>
+            <%if (user.isSubscribed === 1){%>
+              <a href="https://youtu.be/-G9BqkgZXRA">Naruto</a>
+            <%}%>
+            <%}%>
           </div>
         </div>
       </div>
@@ -126,7 +176,17 @@
         <div class="bottom-text">
           <div class="movie-name">
             <span>2019-Current</span>
-            <a href="https://youtu.be/VQGCKyvzIM4">Demon Slayer: Kimetsu no Yaiba</a>
+            <%if (!user){%>
+              <a href=/pricing_table-un>Demon Slayer: Kimetsu no Yaiba</a>
+            <%}%>
+            <%if (user){%>
+            <%if (user.isSubscribed === 0){%>
+              <a href=/pricing_table>Demon Slayer: Kimetsu no Yaiba</a>
+            <%}%>
+            <%if (user.isSubscribed === 1){%>
+              <a href="https://youtu.be/VQGCKyvzIM4">Demon Slayer: Kimetsu no Yaiba</a>
+            <%}%>
+            <%}%>
           </div>
         </div>
       </div>
@@ -142,7 +202,17 @@
         <div class="bottom-text">
           <div class="movie-name">
             <span>2020-Current</span>
-            <a href="https://youtu.be/YKJyP8L6QEs">Jujutsu Kaisen</a>
+            <%if (!user){%>
+              <a href=/pricing_table-un>Jujutsu Kaisen</a>
+            <%}%>
+            <%if (user){%>
+            <%if (user.isSubscribed === 0){%>
+              <a href=/pricing_table>Jujutsu Kaisen</a>
+            <%}%>
+            <%if (user.isSubscribed === 1){%>
+              <a href="https://youtu.be/YKJyP8L6QEs">Jujutsu Kaisen</a>
+            <%}%>
+            <%}%>
           </div>
         </div>
       </div>
@@ -158,7 +228,17 @@
         <div class="bottom-text">
           <div class="movie-name">
             <span>2014-2015</span>
-            <a href="https://youtu.be/aMJpI_fEsA4">Your Lie in April</a>
+            <%if (!user){%>
+              <a href=/pricing_table-un>Your Lie in April</a>
+            <%}%>
+            <%if (user){%>
+            <%if (user.isSubscribed === 0){%>
+              <a href=/pricing_table>Your Lie in April</a>
+            <%}%>
+            <%if (user.isSubscribed === 1){%>
+              <a href="https://youtu.be/aMJpI_fEsA4">Your Lie in April</a>
+            <%}%>
+            <%}%>
           </div>
         </div>
       </div>
@@ -174,7 +254,17 @@
         <div class="bottom-text">
           <div class="movie-name">
             <span>2019-2021</span>
-            <a href="https://youtu.be/ApLudqucq-s">The Promised Neverland</a>
+            <%if (!user){%>
+              <a href=/pricing_table-un>The Promised Neverland</a>
+            <%}%>
+            <%if (user){%>
+            <%if (user.isSubscribed === 0){%>
+              <a href=/pricing_table>The Promised Neverland</a>
+            <%}%>
+            <%if (user.isSubscribed === 1){%>
+              <a href="https://youtu.be/ApLudqucq-s">The Promised Neverland</a>
+            <%}%>
+            <%}%>
           </div>
         </div>
       </div>
@@ -190,7 +280,17 @@
         <div class="bottom-text">
           <div class="movie-name">
             <span>2014-2020</span>
-            <a href="https://youtu.be/JOGp2c7-cKc">Haikyu!!</a>
+            <%if (!user){%>
+              <a href=/pricing_table-un>Haikyu</a>
+            <%}%>
+            <%if (user){%>
+            <%if (user.isSubscribed === 0){%>
+              <a href=/pricing_table>Haikyu</a>
+            <%}%>
+            <%if (user.isSubscribed === 1){%>
+              <a href="https://youtu.be/JOGp2c7-cKc">Haikyu!!</a>
+            <%}%>
+            <%}%>
           </div>
         </div>
       </div>
@@ -207,7 +307,17 @@
         <div class="bottom-text">
           <div class="movie-name">
             <span>2006</span>
-            <a href="https://youtu.be/JsL9vhMfyrs">Black Lagoon</a>
+            <%if (!user){%>
+              <a href=/pricing_table-un>Black Lagoon</a>
+            <%}%>
+            <%if (user){%>
+            <%if (user.isSubscribed === 0){%>
+              <a href=/pricing_table>Black Lagoon</a>
+            <%}%>
+            <%if (user.isSubscribed === 1){%>
+              <a href="https://youtu.be/JsL9vhMfyrs">Black Lagoon</a>
+            <%}%>
+            <%}%>
           </div>
         </div>
       </div>
@@ -224,7 +334,17 @@
         <div class="bottom-text">
           <div class="movie-name">
             <span>1997</span>
-            <a href="https://youtu.be/4OiMOHRDs14">Princess Mononoke</a>
+            <%if (!user){%>
+              <a href=/pricing_table-un>Princess Mononoke</a>
+            <%}%>
+            <%if (user){%>
+            <%if (user.isSubscribed === 0){%>
+              <a href=/pricing_table>Princess Mononoke</a>
+            <%}%>
+            <%if (user.isSubscribed === 1){%>
+              <a href="https://youtu.be/4OiMOHRDs14">Princess Mononoke</a>
+            <%}%>
+            <%}%>
           </div>
         </div>
       </div>
@@ -241,7 +361,17 @@
         <div class="bottom-text">
           <div class="movie-name">
             <span>2014</span>
-            <a href="https://youtu.be/sasgDq9jidk">Akame ga Kill!</a>
+            <%if (!user){%>
+              <a href=/pricing_table-un>Akame ga Kill!</a>
+            <%}%>
+            <%if (user){%>
+            <%if (user.isSubscribed === 0){%>
+              <a href=/pricing_table>Akame ga Kill!</a>
+            <%}%>
+            <%if (user.isSubscribed === 1){%>
+              <a href="https://youtu.be/sasgDq9jidk">Akame ga Kill!</a>
+            <%}%>
+            <%}%>
           </div>
         </div>
       </div>
