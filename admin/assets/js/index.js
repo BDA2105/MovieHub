@@ -11,7 +11,7 @@ if(window.location.pathname == "/admin/"){
         let id = $(this).attr("data-id")
 
         let request = {
-            "url" : `http://localhost:7000/admin/api/users/${id}`,
+            "url" : `https://moviehub01.herokuapp.com/admin/api/users/${id}`,
             "method" : "DELETE"
         }
 
